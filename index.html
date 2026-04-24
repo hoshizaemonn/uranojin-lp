@@ -215,14 +215,19 @@
       padding: 8px 24px 40px;
       position: relative;
     }
-    .profile-timeline::before {
-      content: ''; position: absolute;
-      left: 31px; top: 16px; bottom: 16px;
-      width: 2px; background: var(--navy);
-    }
+    .profile-timeline::before { content: none; }
     .profile-timeline-item {
       display: flex; align-items: flex-start;
       gap: 16px; padding: 10px 0; position: relative;
+    }
+    .profile-timeline-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 6px; width: 2px;
+      top: 21px;     /* pad-top(10) + dot-margin(4) + half-dot(7) */
+      bottom: -21px; /* extends to next item's dot center */
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
     }
     .profile-timeline-dot {
       flex-shrink: 0; width: 14px; height: 14px; border-radius: 50%;
@@ -243,7 +248,7 @@
     .profile-cta {
       padding: 0 24px 48px;
       text-align: center;
-      font-size: 14px; font-weight: 600; line-height: 2.0;
+      font-size: 18px; font-weight: 600; line-height: 2.0;
       color: var(--navy);
     }
 
@@ -257,6 +262,9 @@
     }
     .activities-grid img {
       width: 100%; aspect-ratio: 4/3; object-fit: cover;
+    }
+    .activities-grid img:first-child {
+      object-position: center top;
     }
 
     /* ============================================== */
@@ -530,7 +538,6 @@
       .profile-header { padding: 56px 40px 40px; }
       .profile-name { font-size: 46px; letter-spacing: 18px; }
       .profile-timeline { padding: 8px 40px 56px; }
-      .profile-timeline::before { left: 47px; }
       .profile-timeline-text { font-size: 16px; }
       .yumejuku-logo { width: 100px; }
       .profile-cta { font-size: 16px; padding: 0 40px 64px; }
