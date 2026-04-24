@@ -174,68 +174,73 @@
     /* ============================================== */
     /* ===== PROFILE ===== */
     /* ============================================== */
-    .profile { padding: 48px 0 56px; background: #fff; }
+    .profile { background: #fff; }
     .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
 
-    .profile-intro {
-      font-size: 14px; line-height: 2.1; font-weight: 500;
-      color: var(--text-main); margin-bottom: 36px;
+    /* 上部写真：全幅・上半分クロップ */
+    .profile-hero {
+      width: 100%; overflow: hidden;
+      aspect-ratio: 1/1;
     }
-    .profile-name-large {
-      text-align: center;
-      font-family: 'Noto Serif JP', serif;
-      font-size: 32px; font-weight: 700; letter-spacing: 12px;
-      color: var(--text-main); margin-bottom: 28px;
+    .profile-hero img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 8%;
     }
-    .profile-photo {
-      max-width: 280px; margin: 0 auto 28px;
-    }
-    .profile-photo img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
 
-    .profile-label-section {
-      text-align: center; margin-bottom: 10px;
-    }
+    /* ラベル・名前ブロック */
+    .profile-header { padding: 40px 24px 32px; text-align: center; }
     .profile-label {
-      display: inline-block; font-size: 13px; font-weight: 700;
+      display: inline-block; font-size: 13px; font-weight: 500;
       color: var(--navy); letter-spacing: 4px;
-      padding-bottom: 4px; border-bottom: 2px solid var(--navy);
-    }
-    .profile-name-block {
-      text-align: center; margin-bottom: 28px;
+      padding-bottom: 8px; border-bottom: 1.5px solid var(--navy);
+      margin-bottom: 20px;
     }
     .profile-name {
       font-family: 'Noto Serif JP', serif;
-      font-size: 30px; font-weight: 700; color: var(--text-main);
-      letter-spacing: 10px;
+      font-size: 34px; font-weight: 700;
+      color: var(--navy); letter-spacing: 12px;
+      line-height: 1.2; margin-bottom: 8px;
     }
     .profile-name-kana {
-      font-size: 13px; font-weight: 500; color: var(--text-sub);
-      letter-spacing: 4px; margin-top: 4px;
+      font-size: 13px; font-weight: 400; color: var(--navy);
+      letter-spacing: 6px;
     }
 
-    .profile-timeline { margin-top: 24px; }
-    .profile-timeline-item {
-      display: flex; gap: 14px; padding: 10px 0;
+    /* タイムライン */
+    .profile-timeline {
+      padding: 8px 24px 40px;
+      position: relative;
     }
-    .profile-timeline-bullet {
-      flex-shrink: 0; width: 8px; height: 8px;
-      background: var(--navy); margin-top: 10px;
+    .profile-timeline::before {
+      content: ''; position: absolute;
+      left: 35px; top: 16px; bottom: 16px;
+      width: 2px; background: var(--navy);
+    }
+    .profile-timeline-item {
+      display: flex; align-items: flex-start;
+      gap: 16px; padding: 10px 0; position: relative;
+    }
+    .profile-timeline-dot {
+      flex-shrink: 0; width: 14px; height: 14px; border-radius: 50%;
+      background: var(--navy); margin-top: 4px; position: relative; z-index: 1;
+    }
+    .profile-timeline-body {
+      flex: 1; display: flex; align-items: center; justify-content: space-between;
+      gap: 8px;
     }
     .profile-timeline-text {
-      flex: 1; font-size: 14px; line-height: 1.8; font-weight: 500;
+      font-size: 14px; line-height: 1.85; font-weight: 500; color: var(--text-main);
     }
-    .yumejuku-mark {
-      display: inline-block; padding: 3px 10px;
-      background: var(--navy); color: #fff;
-      font-size: 10px; font-weight: 700; letter-spacing: 1px;
-      border-radius: 2px; margin-left: 6px; vertical-align: middle;
+    .yumejuku-logo {
+      flex-shrink: 0; width: 80px; height: auto;
     }
 
+    /* 下部CTAテキスト */
     .profile-cta {
-      margin-top: 28px; padding: 18px 20px;
-      background: var(--navy-pale); border-left: 3px solid var(--navy);
-      font-size: 14px; font-weight: 700; color: var(--navy-dark); line-height: 1.85;
+      padding: 0 24px 48px;
       text-align: center;
+      font-size: 14px; font-weight: 600; line-height: 2.0;
+      color: var(--navy);
     }
 
     /* ============================================== */
@@ -515,14 +520,16 @@
       .fv-photo { background-size: 120% auto; background-position: 48% 5%; }
       .fv-vertical-text { font-size: 100px; letter-spacing: 16px; top: 8%; right: 5%; }
 
-      .profile { padding: 80px 0 80px; }
       .container { max-width: 760px; }
-      .profile-intro { font-size: 16px; text-align: center; max-width: 620px; margin-left: auto; margin-right: auto; }
-      .profile-name-large { font-size: 42px; letter-spacing: 20px; margin-bottom: 36px; }
-      .profile-photo { max-width: 340px; }
-      .profile-name { font-size: 42px; letter-spacing: 14px; }
+      .profile-hero { aspect-ratio: 16/7; }
+      .profile-hero img { object-position: center 20%; }
+      .profile-header { padding: 56px 40px 40px; }
+      .profile-name { font-size: 46px; letter-spacing: 18px; }
+      .profile-timeline { padding: 8px 40px 56px; }
+      .profile-timeline::before { left: 47px; }
       .profile-timeline-text { font-size: 16px; }
-      .profile-cta { font-size: 16px; padding: 22px 30px; max-width: 620px; margin-left: auto; margin-right: auto; }
+      .yumejuku-logo { width: 100px; }
+      .profile-cta { font-size: 16px; padding: 0 40px 64px; }
 
       .activities { padding: 24px 0 80px; }
       .activities-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 960px; }
@@ -644,97 +651,106 @@
   <!-- PROFILE -->
   <!-- ============================================= -->
   <section class="profile" id="profile">
-    <div class="container">
-      <p class="profile-intro">
-        しがらみなく、右でも左でもなく、市民最優先の政治をただ一筋に貫く。<br>
-        それが、私・浦野仁の約束です。
-      </p>
+    <!-- 上部写真（上半分クロップ） -->
+    <div class="profile-hero">
+      <img src="assets/profile-top.jpg" alt="浦野仁">
+    </div>
 
-      <div class="profile-name-large">浦野 仁</div>
+    <!-- ラベル・名前 -->
+    <div class="profile-header">
+      <div class="profile-label">プロフィール</div>
+      <div class="profile-name">浦野　仁</div>
+      <div class="profile-name-kana">う ら の じ ん</div>
+    </div>
 
-      <div class="profile-photo">
-        <img src="assets/profile-main.jpg" alt="浦野仁">
-      </div>
-
-      <div class="profile-label-section">
-        <span class="profile-label">プロフィール</span>
-      </div>
-      <div class="profile-name-block">
-        <div class="profile-name">浦野 仁</div>
-        <div class="profile-name-kana">うらのじん</div>
-      </div>
-
-      <div class="profile-timeline">
-        <div class="profile-timeline-item">
-          <span class="profile-timeline-bullet"></span>
+    <!-- タイムライン -->
+    <div class="profile-timeline">
+      <div class="profile-timeline-item">
+        <div class="profile-timeline-dot"></div>
+        <div class="profile-timeline-body">
           <div class="profile-timeline-text">
-            <strong>1995年6月24日</strong><br>
-            田川市生まれ。夏吉で喫茶店「軽井沢」の孫として6人兄弟の次男として生まれる
+            1995年6月24日<br>
+            田川市、夏吉で喫茶店「軽井沢」の孫として<br>
+            ６人兄弟の次男として生まれる
           </div>
         </div>
-        <div class="profile-timeline-item">
-          <span class="profile-timeline-bullet"></span>
+      </div>
+      <div class="profile-timeline-item">
+        <div class="profile-timeline-dot"></div>
+        <div class="profile-timeline-body">
           <div class="profile-timeline-text">
             金川小、金川中、田川高校を卒業<br>
-            （きっすいの田川児！）
+            （きっすいの田川民!）
           </div>
         </div>
-        <div class="profile-timeline-item">
-          <span class="profile-timeline-bullet"></span>
+      </div>
+      <div class="profile-timeline-item">
+        <div class="profile-timeline-dot"></div>
+        <div class="profile-timeline-body">
           <div class="profile-timeline-text">
             高校卒業後は旅館に就職<br>
             その後も土木や飲食店、小売など<br>
             様々な職業を経験
           </div>
         </div>
-        <div class="profile-timeline-item">
-          <span class="profile-timeline-bullet"></span>
-          <div class="profile-timeline-text">
-            家庭教師時代に塾を起業することを決意
-          </div>
+      </div>
+      <div class="profile-timeline-item">
+        <div class="profile-timeline-dot"></div>
+        <div class="profile-timeline-body">
+          <div class="profile-timeline-text">家庭教師時代に塾を起業することを決意</div>
         </div>
-        <div class="profile-timeline-item">
-          <span class="profile-timeline-bullet"></span>
+      </div>
+      <div class="profile-timeline-item">
+        <div class="profile-timeline-dot"></div>
+        <div class="profile-timeline-body">
           <div class="profile-timeline-text">
-            北九大法学部に進学<br>
-            1年生の時に学習塾「夢塾」を起業<span class="yumejuku-mark">夢塾</span>
+            北九大法学部に進学し<br>
+            １年生の時に学習塾「夢塾」を起業
           </div>
+          <img src="assets/yumejuku-logo.png" alt="夢塾 YUMEJUKU" class="yumejuku-logo">
         </div>
-        <div class="profile-timeline-item">
-          <span class="profile-timeline-bullet"></span>
+      </div>
+      <div class="profile-timeline-item">
+        <div class="profile-timeline-dot"></div>
+        <div class="profile-timeline-body">
           <div class="profile-timeline-text">
             夢塾を4校舎<br>
             （田川伊田、後藤寺、夏吉、福岡市）に拡大
           </div>
         </div>
-        <div class="profile-timeline-item">
-          <span class="profile-timeline-bullet"></span>
+      </div>
+      <div class="profile-timeline-item">
+        <div class="profile-timeline-dot"></div>
+        <div class="profile-timeline-body">
           <div class="profile-timeline-text">
             経営学の勉強のため<br>
             アメリカ・ボストンの大学院（HULT）に進学
           </div>
         </div>
-        <div class="profile-timeline-item">
-          <span class="profile-timeline-bullet"></span>
-          <div class="profile-timeline-text">
-            MiB（国際経営学修士）を修了
-          </div>
+      </div>
+      <div class="profile-timeline-item">
+        <div class="profile-timeline-dot"></div>
+        <div class="profile-timeline-body">
+          <div class="profile-timeline-text">MIB（国際経営学修士）を修了</div>
         </div>
-        <div class="profile-timeline-item">
-          <span class="profile-timeline-bullet"></span>
+      </div>
+      <div class="profile-timeline-item">
+        <div class="profile-timeline-dot"></div>
+        <div class="profile-timeline-body">
           <div class="profile-timeline-text">
             2025年参議院議員選挙に出馬<br>
             全47都道府県をまわり、3万票以上獲得
           </div>
         </div>
       </div>
-
-      <p class="profile-cta">
-        参議院議員選挙 挑戦時には<br>
-        地元・田川の皆様、そして全国の皆様に<br>
-        多くのご支援をいただきました
-      </p>
     </div>
+
+    <!-- 下部CTA -->
+    <p class="profile-cta">
+      参議院議員選挙 挑戦時には<br>
+      地元・田川の皆様、そして全国の皆様に<br>
+      多くのご支援をいただきました
+    </p>
   </section>
 
   <!-- ============================================= -->
