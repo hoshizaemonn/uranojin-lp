@@ -268,6 +268,41 @@
     }
 
     /* ============================================== */
+    /* ===== POLICY BANNER ===== */
+    /* ============================================== */
+    .policy-banner {
+      padding-top: 70px;
+      background: #fff;
+    }
+    .policy-banner-bg {
+      position: relative;
+      background-image: url('assets/policy-bg.png');
+      background-size: cover;
+      background-position: center;
+      height: 220px;
+    }
+    .policy-banner-person {
+      position: absolute;
+      left: -8px;
+      bottom: 0;
+      height: calc(100% + 70px);
+      width: auto;
+    }
+    .policy-banner-textbox {
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 2px solid rgba(255,255,255,0.9);
+      padding: 20px 24px;
+      text-align: center;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    /* ============================================== */
     /* ===== POLICY ===== */
     /* ============================================== */
     .policy-section { padding: 40px 0 40px; background: #fff; }
@@ -545,6 +580,10 @@
       .activities { padding: 24px 0 80px; }
       .activities-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 960px; }
 
+      .policy-banner { padding-top: 100px; }
+      .policy-banner-bg { height: 300px; }
+      .policy-banner-textbox { right: 60px; font-size: 30px; padding: 28px 40px; }
+
       .policy-section { padding: 80px 0; }
       .policy-header, .policy-headline, .policy-hero-img, .policy-item { max-width: 760px; padding-left: 40px; padding-right: 40px; }
       .policy-tag { padding: 10px 32px; font-size: 18px; }
@@ -775,6 +814,18 @@
       <img src="assets/act-4.jpg" alt="夜の群衆">
       <img src="assets/act-5.jpg" alt="うらのじん街宣">
       <img src="assets/act-6.jpg" alt="支援者の集まり">
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- POLICY BANNER -->
+  <!-- ============================================= -->
+  <section class="policy-banner">
+    <div class="policy-banner-bg">
+      <img src="assets/policy-person.png" alt="うらのじん" class="policy-banner-person">
+      <div class="policy-banner-textbox">
+        <p>田川、新時代<br>への政策!</p>
+      </div>
     </div>
   </section>
 
