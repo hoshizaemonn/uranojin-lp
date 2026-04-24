@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>うらのじん 公式サイト｜田川、新時代</title>
+  <meta name="description" content="うらのじん公式サイト。しがらみなく、右でも左でもなく、市民最優先の政治を。経済・子育て・教育・福祉、田川独自の改革をお約束します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;800;900&family=Noto+Serif+JP:wght@400;500;700;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ===== カラーパレット（AIデザイン準拠：CMYK 100/34/0/0 = #00A8FF）===== */
+    :root {
+      --navy: #00A8FF;             /* メインブルー（お手本AI: C=100 M=34 Y=0 K=0） */
+      --navy-dark: #007ACC;        /* 濃いブルー（ホバー・強調） */
+      --navy-deep: #005A99;        /* 最暗ブルー（フッター背景） */
+      --navy-mid: #006EB3;         /* 中ブルー（SNS背景） */
+      --navy-bright: #00A8FF;      /* 明るいブルー（FV縦書き・見出し） */
+      --navy-light: #80D4FF;       /* 淡ブルー（大きな数字） */
+      --navy-pale: #E0F4FF;        /* 極淡ブルー（背景） */
+      --peach: #f4c5b1;            /* アクセント桃色（FV上部ラベル） */
+      --peach-light: #fae3d7;
+      --accent-red: #e8443a;       /* YouTubeボタン赤 */
+      --text-main: #2a2a2a;
+      --text-sub: #555;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+      color: var(--text-main); line-height: 1.85; background: #fff;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 64px;
+    }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul, ol { list-style: none; }
+
+    /* ============================================== */
+    /* ===== FV（ファーストビュー）===== */
+    /* ============================================== */
+    .fv {
+      position: relative;
+      background: #fff;
+    }
+    .fv-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 16px 12px 0;
+      background: #fff;
+    }
+    .fv-title-block {
+      display: inline-block; background: #fff;
+    }
+    .fv-title-tag {
+      display: inline-block; background: var(--peach); color: #fff;
+      padding: 4px 16px 4px 20px; font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; margin-bottom: 4px;
+    }
+    .fv-title-main {
+      padding: 0 20px 8px 20px;
+      font-size: 28px; font-weight: 900; letter-spacing: 3px;
+      color: var(--text-main); line-height: 1;
+    }
+    .fv-menu-btn {
+      flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%;
+      background: var(--navy); color: #fff;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      cursor: pointer; position: relative;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    .fv-menu-btn .bars { display: flex; flex-direction: column; gap: 4px; }
+    .fv-menu-btn .bars span { display: block; width: 22px; height: 2px; background: #fff; transition: all 0.3s; }
+    .fv-menu-btn .label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px; font-weight: 700; letter-spacing: 1px;
+      margin-top: 3px;
+    }
+    .fv-menu-btn.open .bars span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+    .fv-menu-btn.open .bars span:nth-child(2) { opacity: 0; }
+    .fv-menu-btn.open .bars span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+    .fv-main {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3/4;
+      max-height: 100vh;
+      overflow: hidden;
+      background: #e8e8ed;
+    }
+    .fv-photo {
+      position: absolute; inset: 0;
+    }
+    .fv-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: 35% 8%;
+      transform: scale(1.75);
+      transform-origin: 35% 10%;
+    }
+    .fv-vertical-text {
+      position: absolute; top: 6%; right: 4%;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 60px; font-weight: 900; letter-spacing: 10px;
+      color: var(--navy-bright); line-height: 1.1;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      z-index: 3;
+      text-shadow: 2px 2px 0 rgba(255,255,255,0.9), -2px -2px 0 rgba(255,255,255,0.9), 0 0 30px rgba(255,255,255,0.7);
+    }
+
+    /* ============================================== */
+    /* ===== モバイルナビ ===== */
+    /* ============================================== */
+    .mobile-nav {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(10,29,56,0.96); z-index: 200;
+      padding: 80px 32px 32px;
+    }
+    .mobile-nav.open { display: block; }
+    .mobile-nav-close {
+      position: absolute; top: 18px; right: 20px;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--peach); color: #fff; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px; font-weight: 300;
+    }
+    .mobile-nav a {
+      display: block; padding: 18px 0; color: #fff;
+      font-size: 16px; font-weight: 600; letter-spacing: 2px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    /* ============================================== */
+    /* ===== PROFILE ===== */
+    /* ============================================== */
+    .profile { padding: 48px 0 56px; background: #fff; }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+
+    .profile-intro {
+      font-size: 14px; line-height: 2.1; font-weight: 500;
+      color: var(--text-main); margin-bottom: 36px;
+    }
+    .profile-name-large {
+      text-align: center;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 32px; font-weight: 700; letter-spacing: 12px;
+      color: var(--text-main); margin-bottom: 28px;
+    }
+    .profile-photo {
+      max-width: 280px; margin: 0 auto 28px;
+    }
+    .profile-photo img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+
+    .profile-label-section {
+      text-align: center; margin-bottom: 10px;
+    }
+    .profile-label {
+      display: inline-block; font-size: 13px; font-weight: 700;
+      color: var(--navy); letter-spacing: 4px;
+      padding-bottom: 4px; border-bottom: 2px solid var(--navy);
+    }
+    .profile-name-block {
+      text-align: center; margin-bottom: 28px;
+    }
+    .profile-name {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 30px; font-weight: 700; color: var(--text-main);
+      letter-spacing: 10px;
+    }
+    .profile-name-kana {
+      font-size: 13px; font-weight: 500; color: var(--text-sub);
+      letter-spacing: 4px; margin-top: 4px;
+    }
+
+    .profile-timeline { margin-top: 24px; }
+    .profile-timeline-item {
+      display: flex; gap: 14px; padding: 10px 0;
+    }
+    .profile-timeline-bullet {
+      flex-shrink: 0; width: 8px; height: 8px;
+      background: var(--navy); margin-top: 10px;
+    }
+    .profile-timeline-text {
+      flex: 1; font-size: 14px; line-height: 1.8; font-weight: 500;
+    }
+    .yumejuku-mark {
+      display: inline-block; padding: 3px 10px;
+      background: var(--navy); color: #fff;
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      border-radius: 2px; margin-left: 6px; vertical-align: middle;
+    }
+
+    .profile-cta {
+      margin-top: 28px; padding: 18px 20px;
+      background: var(--navy-pale); border-left: 3px solid var(--navy);
+      font-size: 14px; font-weight: 700; color: var(--navy-dark); line-height: 1.85;
+      text-align: center;
+    }
+
+    /* ============================================== */
+    /* ===== ACTIVITIES（街頭演説写真）===== */
+    /* ============================================== */
+    .activities { padding: 16px 0 48px; background: #fff; }
+    .activities-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+      max-width: 680px; margin: 0 auto; padding: 0 24px;
+    }
+    .activities-grid img {
+      width: 100%; aspect-ratio: 4/3; object-fit: cover;
+    }
+
+    /* ============================================== */
+    /* ===== POLICY ===== */
+    /* ============================================== */
+    .policy-section { padding: 40px 0 40px; background: #fff; }
+
+    .policy-header {
+      max-width: 680px; margin: 0 auto; padding: 0 24px 20px;
+      position: relative;
+    }
+    .policy-tag {
+      display: inline-block;
+      background: var(--navy); color: #fff;
+      padding: 8px 24px 8px 22px; font-size: 15px; font-weight: 700;
+      letter-spacing: 4px; border-radius: 2px;
+    }
+    .policy-bignum {
+      position: absolute; top: -10px; right: 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 96px; font-weight: 800; line-height: 1;
+      color: var(--navy-light);
+      letter-spacing: -4px;
+    }
+    .policy-headline {
+      max-width: 680px; margin: 0 auto; padding: 8px 24px 20px;
+    }
+    .policy-headline-sub {
+      font-size: 15px; font-weight: 700; color: var(--text-main);
+      margin-bottom: 4px; line-height: 1.7;
+    }
+    .policy-headline-main {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 22px; font-weight: 900;
+      color: var(--navy); line-height: 1.55; letter-spacing: 1px;
+    }
+
+    .policy-hero-img {
+      max-width: 680px; margin: 0 auto 28px; padding: 0 24px;
+      position: relative;
+    }
+    .policy-hero-img img {
+      width: 100%; aspect-ratio: 16/10; object-fit: cover;
+      border-radius: 2px;
+    }
+    .policy-hero-img .ribbon {
+      position: absolute; top: 50%; right: 28px;
+      transform: translateY(-50%);
+      background: var(--navy); color: #fff;
+      font-family: 'Noto Serif JP', serif;
+      padding: 14px 10px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 15px; font-weight: 700; letter-spacing: 3px;
+      line-height: 1.4;
+    }
+
+    /* 政策本文アイテム */
+    .policy-item {
+      max-width: 680px; margin: 0 auto 22px; padding: 0 24px;
+    }
+    .policy-item-title {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 16px; font-weight: 800; color: var(--navy);
+      line-height: 1.55; margin-bottom: 8px;
+    }
+    .policy-item-title::before {
+      content: '▣'; color: var(--navy); font-size: 13px; flex-shrink: 0;
+      line-height: 1.7;
+    }
+    .policy-item-desc {
+      font-size: 14px; line-height: 2.0; color: var(--text-main);
+      padding-left: 22px;
+    }
+    .policy-item-list {
+      padding-left: 22px; margin: 4px 0 10px;
+    }
+    .policy-item-list li {
+      font-size: 14px; line-height: 1.95; font-weight: 700;
+      color: var(--navy-dark);
+    }
+
+    /* 紺色背景の補足ボックス（吹き出し風） */
+    .policy-callout {
+      margin: 14px 0 0 22px;
+      background: var(--navy); color: #fff;
+      padding: 18px 20px; border-radius: 6px;
+      font-size: 13px; line-height: 1.95;
+      position: relative;
+    }
+    .policy-callout::before {
+      content: ''; position: absolute; top: -8px; left: 24px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid var(--navy);
+    }
+    .policy-callout + .policy-callout { margin-top: 10px; }
+
+    /* 財源について（紺背景ボックス） */
+    .policy-source {
+      margin: 14px 0 0 22px;
+      background: var(--navy); color: #fff;
+      padding: 18px 20px; border-radius: 6px;
+    }
+    .policy-source::before {
+      content: ''; position: absolute; top: -8px; left: 24px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid var(--navy);
+    }
+    .policy-source { position: relative; }
+    .policy-source-title {
+      font-size: 14px; font-weight: 700;
+      padding-bottom: 8px; margin-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.35);
+    }
+    .policy-source-list { counter-reset: src; }
+    .policy-source-list li {
+      font-size: 13px; line-height: 1.9;
+      padding-left: 28px; position: relative; margin-bottom: 8px;
+    }
+    .policy-source-list li:last-child { margin-bottom: 0; }
+    .policy-source-list li::before {
+      counter-increment: src;
+      content: counter(src); position: absolute; left: 0; top: 3px;
+      width: 20px; height: 20px; border-radius: 50%;
+      background: #fff; color: var(--navy);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700; font-family: 'Montserrat', sans-serif;
+    }
+
+    /* ============================================== */
+    /* ===== SNS ===== */
+    /* ============================================== */
+    .sns { padding: 44px 24px 48px; background: var(--navy-mid); color: #fff; }
+    .sns-inner { max-width: 440px; margin: 0 auto; }
+    .sns-title {
+      text-align: center; font-size: 18px; font-weight: 800; letter-spacing: 3px;
+      padding-bottom: 14px; margin-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.45);
+    }
+    .sns-yt-box {
+      background: #fff; border-radius: 4px;
+      aspect-ratio: 16/9; margin-bottom: 18px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--navy); font-weight: 700; font-size: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .sns-yt-box iframe { width: 100%; height: 100%; border: 0; }
+    .sns-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; padding: 13px 18px; border-radius: 30px;
+      font-size: 15px; font-weight: 700; letter-spacing: 1px;
+      margin-bottom: 10px; transition: transform 0.2s;
+    }
+    .sns-btn:hover { transform: translateY(-2px); }
+    .sns-btn-yt { background: var(--accent-red); color: #fff; }
+    .sns-btn-other {
+      background: #fff; color: var(--navy);
+    }
+    .sns-btn-icon { width: 22px; height: 22px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .sns-btn-icon svg { width: 100%; height: 100%; }
+    .sns-btn-other .sns-btn-icon svg { fill: var(--navy); }
+
+    /* ============================================== */
+    /* ===== SUPPORT ===== */
+    /* ============================================== */
+    .support { padding: 48px 24px 56px; background: #fff; text-align: center; }
+    .support-inner { max-width: 440px; margin: 0 auto; }
+    .support-lead {
+      font-size: 15px; font-weight: 700; line-height: 1.9;
+      color: var(--text-main); margin-bottom: 26px;
+    }
+    .support-card {
+      background: var(--navy-pale); border-radius: 10px;
+      padding: 24px 20px 22px; margin-bottom: 18px; position: relative;
+    }
+    .support-card-title {
+      font-size: 14px; font-weight: 700; color: var(--navy-dark);
+      letter-spacing: 2px; margin-bottom: 14px;
+    }
+    .support-btn {
+      display: block; width: 100%; max-width: 220px; margin: 0 auto 14px;
+      background: var(--navy); color: #fff;
+      padding: 12px 18px; border-radius: 4px;
+      font-size: 16px; font-weight: 800; letter-spacing: 2px;
+      text-align: center; transition: opacity 0.2s;
+    }
+    .support-btn:hover { opacity: 0.9; }
+    .support-card-desc {
+      font-size: 13px; line-height: 1.95; color: var(--text-main); text-align: left;
+    }
+    .support-card-badge {
+      position: absolute; bottom: 0; right: -4px;
+      background: var(--navy); color: #fff;
+      width: 70px; height: 70px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 800; line-height: 1.25; text-align: center;
+      transform: rotate(-8deg);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    /* ============================================== */
+    /* ===== FOOTER ===== */
+    /* ============================================== */
+    .footer {
+      background: var(--navy-mid); color: #fff; padding: 32px 24px 18px;
+    }
+    .footer-inner { max-width: 440px; margin: 0 auto; }
+    .footer-title {
+      font-size: 18px; font-weight: 800; letter-spacing: 3px;
+      padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.4);
+      margin-bottom: 14px;
+    }
+    .footer-note { font-size: 12px; opacity: 0.9; margin-bottom: 18px; }
+    .footer-info {
+      font-size: 13px; line-height: 1.95; padding-left: 14px;
+      position: relative;
+    }
+    .footer-info::before {
+      content: ''; position: absolute; left: 0; top: 4px; bottom: 4px;
+      width: 3px; background: rgba(255,255,255,0.85);
+    }
+    .footer-info a { text-decoration: underline; }
+    .footer-copy {
+      text-align: center; font-size: 11px; padding-top: 22px;
+      margin-top: 22px; border-top: 1px solid rgba(255,255,255,0.3);
+      opacity: 0.9; letter-spacing: 1px;
+    }
+
+    /* ============================================== */
+    /* ===== 固定ボタン ===== */
+    /* ============================================== */
+    .floating-sp {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+      background: var(--navy);
+    }
+    .floating-sp a {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      color: #fff; padding: 18px; font-size: 15px; font-weight: 800; letter-spacing: 2px;
+      line-height: 1;
+    }
+    .floating-pc { display: none; position: fixed; bottom: 24px; right: 24px; z-index: 90; }
+    .floating-pc a {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--navy); color: #fff; border-radius: 50px;
+      padding: 14px 24px; font-size: 14px; font-weight: 800; letter-spacing: 2px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    }
+    .floating-pc a:hover { transform: translateY(-2px); }
+
+    /* ============================================== */
+    /* ===== PC (769px+) ===== */
+    /* ============================================== */
+    @media (min-width: 769px) {
+      body { padding-bottom: 0; }
+
+      .fv-header { padding: 16px 32px 16px 0; }
+      .fv-title-tag { font-size: 13px; padding: 5px 20px 5px 32px; }
+      .fv-title-main { font-size: 40px; padding: 0 32px 10px; }
+      .fv-menu-btn { width: 64px; height: 64px; }
+
+      .fv-main { aspect-ratio: 16/9; max-height: 100vh; }
+      .fv-photo img { object-position: center 10%; transform: scale(1.65); transform-origin: center 10%; }
+      .fv-vertical-text { font-size: 110px; letter-spacing: 16px; top: 8%; right: 5%; }
+
+      .profile { padding: 80px 0 80px; }
+      .container { max-width: 760px; }
+      .profile-intro { font-size: 16px; text-align: center; max-width: 620px; margin-left: auto; margin-right: auto; }
+      .profile-name-large { font-size: 42px; letter-spacing: 20px; margin-bottom: 36px; }
+      .profile-photo { max-width: 340px; }
+      .profile-name { font-size: 42px; letter-spacing: 14px; }
+      .profile-timeline-text { font-size: 16px; }
+      .profile-cta { font-size: 16px; padding: 22px 30px; max-width: 620px; margin-left: auto; margin-right: auto; }
+
+      .activities { padding: 24px 0 80px; }
+      .activities-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 960px; }
+
+      .policy-section { padding: 80px 0; }
+      .policy-header, .policy-headline, .policy-hero-img, .policy-item { max-width: 760px; padding-left: 40px; padding-right: 40px; }
+      .policy-tag { padding: 10px 32px; font-size: 18px; }
+      .policy-bignum { font-size: 160px; top: -32px; right: 40px; }
+      .policy-headline-sub { font-size: 17px; }
+      .policy-headline-main { font-size: 32px; }
+      .policy-hero-img .ribbon { font-size: 20px; padding: 22px 14px; right: 60px; }
+      .policy-item-title { font-size: 19px; }
+      .policy-item-desc { font-size: 15px; }
+      .policy-item-list li { font-size: 15px; }
+      .policy-callout, .policy-source { font-size: 14px; padding: 22px 26px; }
+
+      .sns { padding: 80px 24px; }
+      .sns-inner { max-width: 560px; }
+      .sns-title { font-size: 22px; }
+
+      .support { padding: 80px 24px 80px; }
+      .support-inner { max-width: 560px; }
+      .support-lead { font-size: 19px; }
+      .support-card { padding: 30px 30px 26px; }
+
+      .footer { padding: 56px 24px 26px; }
+      .footer-inner { max-width: 760px; }
+
+      .floating-sp { display: none; }
+      .floating-pc { display: block; }
+    }
+
+    /* ============================================== */
+    /* ===== SP small (380px以下) ===== */
+    /* ============================================== */
+    @media (max-width: 380px) {
+      .fv-header { padding: 10px 12px 0 0; }
+      .fv-title-tag { font-size: 10px; padding: 3px 12px 3px 14px; }
+      .fv-title-main { font-size: 22px; padding: 0 14px 6px; letter-spacing: 2px; }
+      .fv-menu-btn { width: 48px; height: 48px; }
+      .fv-vertical-text { font-size: 44px; letter-spacing: 6px; top: 10%; right: 4%; }
+      .policy-bignum { font-size: 72px; right: 16px; }
+      .policy-headline-main { font-size: 18px; }
+      .container, .policy-header, .policy-headline, .policy-hero-img, .policy-item { padding-left: 16px; padding-right: 16px; }
+      .activities-grid { padding: 0 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================= -->
+  <!-- FV（ファーストビュー） -->
+  <!-- ============================================= -->
+  <section class="fv">
+    <h1 class="sr-only">うらのじん 公式サイト — 田川、新時代</h1>
+    <div class="fv-header">
+      <div class="fv-title-block">
+        <div class="fv-title-tag">田川が、ふるさと</div>
+        <div class="fv-title-main">うらのじん</div>
+      </div>
+      <div class="fv-menu-btn" id="menuBtn" aria-label="メニューを開く">
+        <div class="bars"><span></span><span></span><span></span></div>
+        <div class="label">MENU</div>
+      </div>
+    </div>
+    <div class="fv-main">
+      <div class="fv-photo">
+        <img src="assets/fv-main.jpg" alt="うらのじん（浦野仁）">
+      </div>
+      <div class="fv-vertical-text">田川、新時代</div>
+    </div>
+  </section>
+
+  <!-- モバイルナビ -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-close" id="navClose">×</div>
+    <a href="#profile">プロフィール</a>
+    <a href="#policy-1">経済改革</a>
+    <a href="#policy-2">子育て改革</a>
+    <a href="#policy-3">教育改革</a>
+    <a href="#policy-4">福祉改革</a>
+    <a href="#sns">SNS・YouTube</a>
+    <a href="#support">応援する</a>
+  </div>
+
+  <!-- ============================================= -->
+  <!-- PROFILE -->
+  <!-- ============================================= -->
+  <section class="profile" id="profile">
+    <div class="container">
+      <p class="profile-intro">
+        しがらみなく、右でも左でもなく、市民最優先の政治をただ一筋に貫く。<br>
+        それが、私・浦野仁の約束です。
+      </p>
+
+      <div class="profile-name-large">浦野 仁</div>
+
+      <div class="profile-photo">
+        <img src="assets/profile-main.jpg" alt="浦野仁">
+      </div>
+
+      <div class="profile-label-section">
+        <span class="profile-label">プロフィール</span>
+      </div>
+      <div class="profile-name-block">
+        <div class="profile-name">浦野 仁</div>
+        <div class="profile-name-kana">うらのじん</div>
+      </div>
+
+      <div class="profile-timeline">
+        <div class="profile-timeline-item">
+          <span class="profile-timeline-bullet"></span>
+          <div class="profile-timeline-text">
+            <strong>1995年6月24日</strong><br>
+            田川市生まれ。夏吉で喫茶店「軽井沢」の孫として6人兄弟の次男として生まれる
+          </div>
+        </div>
+        <div class="profile-timeline-item">
+          <span class="profile-timeline-bullet"></span>
+          <div class="profile-timeline-text">
+            金川小、金川中、田川高校を卒業<br>
+            （きっすいの田川児！）
+          </div>
+        </div>
+        <div class="profile-timeline-item">
+          <span class="profile-timeline-bullet"></span>
+          <div class="profile-timeline-text">
+            高校卒業後は旅館に就職<br>
+            その後も土木や飲食店、小売など<br>
+            様々な職業を経験
+          </div>
+        </div>
+        <div class="profile-timeline-item">
+          <span class="profile-timeline-bullet"></span>
+          <div class="profile-timeline-text">
+            家庭教師時代に塾を起業することを決意
+          </div>
+        </div>
+        <div class="profile-timeline-item">
+          <span class="profile-timeline-bullet"></span>
+          <div class="profile-timeline-text">
+            北九大法学部に進学<br>
+            1年生の時に学習塾「夢塾」を起業<span class="yumejuku-mark">夢塾</span>
+          </div>
+        </div>
+        <div class="profile-timeline-item">
+          <span class="profile-timeline-bullet"></span>
+          <div class="profile-timeline-text">
+            夢塾を4校舎<br>
+            （田川伊田、後藤寺、夏吉、福岡市）に拡大
+          </div>
+        </div>
+        <div class="profile-timeline-item">
+          <span class="profile-timeline-bullet"></span>
+          <div class="profile-timeline-text">
+            経営学の勉強のため<br>
+            アメリカ・ボストンの大学院（HULT）に進学
+          </div>
+        </div>
+        <div class="profile-timeline-item">
+          <span class="profile-timeline-bullet"></span>
+          <div class="profile-timeline-text">
+            MiB（国際経営学修士）を修了
+          </div>
+        </div>
+        <div class="profile-timeline-item">
+          <span class="profile-timeline-bullet"></span>
+          <div class="profile-timeline-text">
+            2025年参議院議員選挙に出馬<br>
+            全47都道府県をまわり、3万票以上獲得
+          </div>
+        </div>
+      </div>
+
+      <p class="profile-cta">
+        参議院議員選挙 挑戦時には<br>
+        地元・田川の皆様、そして全国の皆様に<br>
+        多くのご支援をいただきました
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- ACTIVITIES -->
+  <!-- ============================================= -->
+  <section class="activities">
+    <div class="activities-grid">
+      <img src="assets/speech-1.jpg" alt="駅前街頭演説">
+      <img src="assets/crowd-1.jpg" alt="街頭に集まる支援者">
+      <img src="assets/speech-van.jpg" alt="田川伊田駅前 街宣">
+      <img src="assets/crowd-2.jpg" alt="夜の集会">
+      <img src="assets/crowd-3.jpg" alt="地域集会">
+      <img src="assets/speech-2.jpg" alt="街頭演説">
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- POLICY 1：経済改革 -->
+  <!-- ============================================= -->
+  <section class="policy-section" id="policy-1">
+    <div class="policy-header">
+      <div class="policy-tag">経済改革</div>
+      <div class="policy-bignum">1</div>
+    </div>
+    <div class="policy-headline">
+      <div class="policy-headline-sub">稼ぐ力と活力を取り戻す</div>
+      <div class="policy-headline-main">「攻めの田川市」</div>
+    </div>
+    <div class="policy-hero-img">
+      <img src="assets/activity-1.jpg" alt="田川の街並み">
+      <div class="ribbon">田川、新時代<br>への飛翔</div>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">市長トップセールスによる企業誘致</div>
+      <p class="policy-item-desc">
+        自らが先頭に立ち、大型産業誘致や企業の誘致に尽力します。雇用を創出し、市の利便性と活気を取り戻します。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">「情報公開」から「情報発信」へ</div>
+      <p class="policy-item-desc">
+        公式YouTubeチャンネルを新設し、田川市の魅力を全国へ発信。認知度向上とふるさと納税の増収に繋げ、市の財源を大幅に強化します。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">ふるさと納税収入の拡大</div>
+      <p class="policy-item-desc">
+        田川市の返礼品ラインナップをさらに充実させるとともに、戦略的なPRで全国への認知度を高め、ふるさと納税収入の大幅な増加を目指します。得られた財源は、すべて市民の暮らしへ還元します。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">企業版ふるさと納税を強化／全国の力を田川市へ</div>
+      <p class="policy-item-desc">
+        田川市の挑戦に共感する企業を全国から募り、幼児複合施設や教育改革など具体的な事業への投資を呼び込みます。自ら先頭に立ち、田川市を「応援したくなる街」へと変えていきます。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">新たな起業家を育む</div>
+      <p class="policy-item-desc">
+        田川市での新規事業に対し、創業資金の援助や専門家による創業サポートを行ない、若者や挑戦者の事業し、活気あるビジネス環境を整えます。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">東高校跡地や後藤寺駅等の戦略的開発</div>
+      <p class="policy-item-desc">
+        地域の拠点として遊休資産の再開発を推進します。街の景観を一新し、人が集まる賑わいの空間を創出します。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- POLICY 2：子育て改革 -->
+  <!-- ============================================= -->
+  <section class="policy-section" id="policy-2">
+    <div class="policy-header">
+      <div class="policy-tag">子育て改革</div>
+      <div class="policy-bignum">2</div>
+    </div>
+    <div class="policy-headline">
+      <div class="policy-headline-sub">安心して産み育てられる</div>
+      <div class="policy-headline-main">「子育て先進都市」</div>
+    </div>
+    <div class="policy-hero-img">
+      <img src="assets/activity-2.jpg" alt="子育て応援">
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">出産お祝い金で子育て支援<br>第3子以降、100万円を支給</div>
+      <ul class="policy-item-list">
+        <li>1人目出産お祝い金 10万円</li>
+        <li>2人目は30万円</li>
+        <li>3人目以降は100万円</li>
+      </ul>
+      <p class="policy-item-desc" style="margin-top: 10px;">
+        多子世帯への大胆な支援を行い、経済的な不安を払拭して、田川市での子育てを全力で応援します。
+      </p>
+      <div class="policy-callout">
+        3人目以降100万円の出産お祝い金は「出産時・小学校入学時・中学校入学時・高校入学時・高校卒業時」に分割して支給します。
+      </div>
+      <div class="policy-callout">
+        お金が必要となるタイミングでしっかりと支援を行うことで家計の負担の軽減、移住リスクの軽減に繋げます。
+      </div>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">「おかえり田川」奨学金（学費全額免除）</div>
+      <p class="policy-item-desc">
+        大学や専門学校の卒業後に田川市内で一定期間就職・定住すれば、進学にかかる学費返済を最大全額免除する制度を整えます。若者の挑戦を支え、街の将来を担う人材を育てます。
+      </p>
+      <div class="policy-source">
+        <div class="policy-source-title">財源について</div>
+        <ol class="policy-source-list">
+          <li>国の補助制度（文科省・内閣府の地方創生関連補助金を最大限活用します）</li>
+          <li>ふるさと納税（田川の子どもを応援したい！という全国からの気持ちを、ふるさと納税で形にします）</li>
+          <li>地元企業との連携（協賛企業への就職で返済免除とする三者連携モデルも導入し、企業の人材確保にも貢献します）</li>
+        </ol>
+      </div>
+      <p class="policy-item-desc" style="margin-top: 14px;">
+        市民の税負担を最小限に抑えながら、持続可能な制度を構築します。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">子ども習い事応援事業（学習塾を除く）</div>
+      <p class="policy-item-desc">
+        子どもたちが個性を伸ばし、自己肯定感を育めるよう、文化・スポーツ・芸術など、習い事にかかる費用を助成。家庭の事情を問わず、すべての子どもに「第三の居場所」を届けます。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">「親のための子育て塾」創設</div>
+      <p class="policy-item-desc">
+        孤立しがちな育児をサポート。専門家によるアドバイスや親同士の交流を通じ、心にゆとりを持てる仕組みを作ります。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- POLICY 3：教育改革 -->
+  <!-- ============================================= -->
+  <section class="policy-section" id="policy-3">
+    <div class="policy-header">
+      <div class="policy-tag">教育改革</div>
+      <div class="policy-bignum">3</div>
+    </div>
+    <div class="policy-headline">
+      <div class="policy-headline-sub">子どもたちを守り、育てる</div>
+      <div class="policy-headline-main">田川独自の「次世代教育」</div>
+    </div>
+    <div class="policy-hero-img">
+      <img src="assets/profile-sub-3.jpg" alt="教育の現場">
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">すべての田川の子どもに、<br>安心して学べる環境を</div>
+      <p class="policy-item-desc">
+        田川市の学習環境の充実を、最優先に取り組みます。<br>
+        子どもが安心して学ぶためには、学校での生徒へのケアだけでなく、その根本にある家庭環境への支援が必要です。<br>
+        そのために、行政・学校・民間が一体となって連携し、田川市全体での包括的なサポート体制を構築します。<br>
+        すべての子どもが、田川で安心して学び、夢を描けるまちをつくります。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">テクノロジー活用による学力向上</div>
+      <p class="policy-item-desc">
+        AIやVR等のテクノロジーを活用し一人ひとりの習熟度に合わせた「個別最適化された学び」を実現。学習塾での経験を活かし、田川市の基礎学力の底上げと、学ぶ楽しさを推進します。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">教員が「教育」に集中できる環境へ</div>
+      <p class="policy-item-desc">
+        学校現場における補助員を増員、事務作業等の負担を軽減し、教員が教師の仕事に集中して子どもたちと向き合う時間を最大化します。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">夢を形にするキャリア教育</div>
+      <p class="policy-item-desc">
+        子どもたちの可能性を最大化するため、早期からキャリア教育を充実させ、将来のビジョンを描けるよう支援します。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- POLICY 4：福祉改革 -->
+  <!-- ============================================= -->
+  <section class="policy-section" id="policy-4">
+    <div class="policy-header">
+      <div class="policy-tag">福祉改革</div>
+      <div class="policy-bignum">4</div>
+    </div>
+    <div class="policy-headline">
+      <div class="policy-headline-sub">「田川に住んで良かったと言える毎日」を。</div>
+      <div class="policy-headline-main">高齢者幸福度No.1を目指す！</div>
+    </div>
+    <div class="policy-hero-img">
+      <img src="assets/profile-sub-5.jpg" alt="高齢者支援">
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">移動手段の確保</div>
+      <p class="policy-item-desc">
+        コミュニティバスを増便し、田川市内のどこに住んでいても移動しやすい環境を整えます。免許返納後も、買い物や通院、地域の集まりに気軽に出かけられる「足」を確保し、アクティブな毎日を支えます。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">多世代交流拠点（幼老複合施設等）の創設</div>
+      <p class="policy-item-desc">
+        こども食堂等と高齢者の憩いの場（シニア食堂）を合体、子どもの笑い声で高齢者の元気になり、高齢者の知恵が子どもを育む、温かな「街の家族」の場を作ります。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">買い物難民ゼロを目指す</div>
+      <p class="policy-item-desc">
+        移動販売や地域交通の充実、民間との連携を進め、誰もが身近で安心して買い物できる環境を整えます。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">生涯福祉の充実</div>
+      <p class="policy-item-desc">
+        子どもから高齢者まで、人生のすべての段階で支えが届くまちへ。医療・介護・福祉の連携を強化し、誰もが安心して暮らし続けられる田川市を実現します。
+      </p>
+    </div>
+
+    <div class="policy-item">
+      <div class="policy-item-title">高齢者住宅バリアフリー化助成事業</div>
+      <p class="policy-item-desc">
+        高齢者の皆さまが住宅で安全に暮らし続けられるよう、手すりの設置、段差解消、浴室・トイレの改修など住宅のバリアフリー改修費用の一部を助成します。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SNS -->
+  <!-- ============================================= -->
+  <section class="sns" id="sns">
+    <div class="sns-inner">
+      <h2 class="sns-title">うらのじんをもっと知る</h2>
+      <div class="sns-yt-box">YouTube動画</div>
+      <a href="#" class="sns-btn sns-btn-yt" target="_blank" rel="noopener">
+        <span class="sns-btn-icon">
+          <svg viewBox="0 0 24 24" fill="#fff"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </span>
+        YouTubeチャンネルを見る
+      </a>
+      <a href="#" class="sns-btn sns-btn-other" target="_blank" rel="noopener">
+        <span class="sns-btn-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.849.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </span>
+        Instagram
+      </a>
+      <a href="#" class="sns-btn sns-btn-other" target="_blank" rel="noopener">
+        <span class="sns-btn-icon">
+          <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.84 0z"/></svg>
+        </span>
+        TikTok
+      </a>
+      <a href="#" class="sns-btn sns-btn-other" target="_blank" rel="noopener">
+        <span class="sns-btn-icon">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </span>
+        X（旧Twitter）
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SUPPORT -->
+  <!-- ============================================= -->
+  <section class="support" id="support">
+    <div class="support-inner">
+      <p class="support-lead">
+        うらのじんの活動は<br>
+        皆さまの応援によって支えられています
+      </p>
+
+      <div class="support-card">
+        <div class="support-card-title">後援会・サポーターになる</div>
+        <a href="#" class="support-btn">応援する</a>
+        <p class="support-card-desc">
+          街頭での応援や、政治活動へのサポート、証紙貼りなどできる範囲でのご協力をお願いしています。遠方の方も「情報発信」や「ご紹介」などで関われます。
+        </p>
+        <div class="support-card-badge">田川市外<br>の方も<br>大歓迎！</div>
+      </div>
+
+      <div class="support-card">
+        <div class="support-card-title">ご寄付のお願い</div>
+        <a href="#" class="support-btn">ご寄付・献金</a>
+        <p class="support-card-desc">
+          ご支援いただける方は、ぜひご寄付をお願いいたします。政治活動・事務所運営の貴重な財源として大切に活用させていただきます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- FOOTER -->
+  <!-- ============================================= -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-title">うらのじん公式サイト</div>
+      <p class="footer-note">このサイトはうらのじん後援会が運営しています。</p>
+      <p class="footer-info">
+        福岡県田川市大字伊田310-4<br>
+        MAIL：<a href="mailto:uranojin.official@gmail.com">uranojin.official@gmail.com</a>
+      </p>
+      <p class="footer-copy">Copyright(C) urakai All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 固定応援ボタン -->
+  <div class="floating-sp"><a href="#support">応援する</a></div>
+  <div class="floating-pc"><a href="#support">応援する</a></div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const navClose = document.getElementById('navClose');
+    const openNav = () => { menuBtn.classList.add('open'); mobileNav.classList.add('open'); };
+    const closeNav = () => { menuBtn.classList.remove('open'); mobileNav.classList.remove('open'); };
+    menuBtn.addEventListener('click', () => mobileNav.classList.contains('open') ? closeNav() : openNav());
+    navClose.addEventListener('click', closeNav);
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+  </script>
+
+</body>
+</html>
