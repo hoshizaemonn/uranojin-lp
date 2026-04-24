@@ -306,7 +306,14 @@
     /* ===== POLICY ===== */
     /* ============================================== */
     .policy-section { padding: 40px 0 40px; background: #fff; }
-    .policy-section + .policy-section { border-top: 1px solid #cde6f7; }
+    .policy-section + .policy-section { padding-top: 0; }
+    .policy-section + .policy-section::before {
+      content: '';
+      display: block;
+      height: 2px;
+      background: #cde6f7;
+      margin: 0 24px 40px;
+    }
 
     .policy-header {
       max-width: 680px; margin: 0 auto; padding: 0 24px 20px;
@@ -589,6 +596,7 @@
       .policy-banner-textbox { right: 60px; font-size: 30px; padding: 28px 40px; }
 
       .policy-section { padding: 80px 0; }
+      .policy-section + .policy-section::before { margin: 0 40px 80px; }
       .policy-header, .policy-headline, .policy-hero-img, .policy-item { max-width: 760px; padding-left: 40px; padding-right: 40px; }
       .policy-tag { padding: 10px 32px; font-size: 18px; }
       .policy-bignum { font-size: 160px; top: -32px; right: 40px; }
