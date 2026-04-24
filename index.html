@@ -132,6 +132,46 @@
     }
 
     /* ============================================== */
+    /* ===== GREETING（ごあいさつ）===== */
+    /* ============================================== */
+    .greeting { padding: 52px 0 56px; background: #fff; }
+    .greeting-inner { max-width: 680px; margin: 0 auto; padding: 0 28px; }
+    .greeting-label {
+      text-align: center; margin-bottom: 28px;
+    }
+    .greeting-label span {
+      display: inline-block;
+      font-size: 13px; font-weight: 500; letter-spacing: 4px;
+      color: var(--navy); padding-bottom: 8px;
+      border-bottom: 1.5px solid var(--navy);
+    }
+    .greeting-title {
+      text-align: center;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 32px; font-weight: 700; letter-spacing: 4px;
+      color: var(--navy); line-height: 1.2;
+      margin-bottom: 36px;
+    }
+    .greeting-body {
+      font-size: 14px; line-height: 2.1; color: var(--text-main);
+    }
+    .greeting-body p { margin-bottom: 1.6em; }
+    .greeting-body p:last-of-type { margin-bottom: 0; }
+    .greeting-sig {
+      text-align: center; margin-top: 40px;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 26px; font-weight: 700; letter-spacing: 10px;
+      color: var(--text-main);
+    }
+
+    @media (min-width: 769px) {
+      .greeting { padding: 80px 0 80px; }
+      .greeting-title { font-size: 44px; margin-bottom: 48px; }
+      .greeting-body { font-size: 16px; }
+      .greeting-sig { font-size: 32px; letter-spacing: 14px; margin-top: 56px; }
+    }
+
+    /* ============================================== */
     /* ===== PROFILE ===== */
     /* ============================================== */
     .profile { padding: 48px 0 56px; background: #fff; }
@@ -560,6 +600,7 @@
   <!-- モバイルナビ -->
   <div class="mobile-nav" id="mobileNav">
     <div class="mobile-nav-close" id="navClose">×</div>
+    <a href="#greeting">ごあいさつ</a>
     <a href="#profile">プロフィール</a>
     <a href="#policy-1">経済改革</a>
     <a href="#policy-2">子育て改革</a>
@@ -568,6 +609,36 @@
     <a href="#sns">SNS・YouTube</a>
     <a href="#support">応援する</a>
   </div>
+
+  <!-- ============================================= -->
+  <!-- GREETING（ごあいさつ） -->
+  <!-- ============================================= -->
+  <section class="greeting" id="greeting">
+    <div class="greeting-inner">
+      <div class="greeting-label"><span>ごあいさつ</span></div>
+      <h2 class="greeting-title">田川、新時代</h2>
+      <div class="greeting-body">
+        <p>私は田川に生まれ、田川で育ち、田川で働いてきました。<br>
+        このふるさと・田川を、心から愛しています。<br>
+        しかし、石炭で栄えた時代は遠くなり、いま田川市は静かに、しかし確実に衰退の道をたどっています。</p>
+
+        <p>このままでは、学業や就職、あるいは生活の不安から、大切な人たちがこの地を離れ続けていく——そんな未来を、私は黙って見ていることができません。</p>
+
+        <p>かつて日本のエネルギーを支えた炭鉱の街・田川。福岡市・北九州市どちらへもアクセスできる地理的優位性も持っています。さらにその田川人の底力と気概は、いまも確かにここにある。この街にはまだ、再び輝くための十分な可能性がある。</p>
+
+        <p>「政治が変われば、田川は必ず変わる。」<br>
+        だから私は、立ち上がりました。<br>
+        約10年の経営で培ったノウハウと、アメリカで学んだ本場の経営学の知識——その両方を、市政に注ぎ込む覚悟です。</p>
+
+        <p>掲げる言葉は、「田川、新時代」。<br>
+        教育・子育て・経済・福祉——これら4つの改革を力強く推し進め、田川の未来を切り拓いてまいります。</p>
+
+        <p>しがらみなく、右でも左でもなく、市民最優先の政治をただ一筋に貫く。<br>
+        それが、私・浦野仁の約束です。</p>
+      </div>
+      <div class="greeting-sig">浦野　仁</div>
+    </div>
+  </section>
 
   <!-- ============================================= -->
   <!-- PROFILE -->
