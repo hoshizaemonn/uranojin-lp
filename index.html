@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;800;900&family=Noto+Serif+JP:wght@400;500;700;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
+    /* PUDShinGoPr6N（FOT-PUD新ゴ）が端末・Adobe Fontsで利用可能な場合に優先使用 */
+    @font-face { font-family: 'PUDShinGo'; src: local('FOT-PUDShinGo Pr6N'), local('PUDShinGoPr6N'), local('FOT-PUD新ゴ Pro6N'); }
+  </style>
+  <style>
     /* ===== カラーパレット（AIデザイン準拠：CMYK 100/34/0/0 = #00A8FF）===== */
     :root {
       --navy: #00A8FF;             /* メインブルー（お手本AI: C=100 M=34 Y=0 K=0） */
@@ -28,7 +32,7 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+      font-family: 'PUDShinGo', 'FOT-PUDShinGo Pr6N', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
       color: var(--text-main); line-height: 1.85; background: #fff;
       -webkit-font-smoothing: antialiased;
       padding-bottom: 64px;
@@ -213,7 +217,7 @@
     }
     .profile-timeline::before {
       content: ''; position: absolute;
-      left: 35px; top: 16px; bottom: 16px;
+      left: 31px; top: 16px; bottom: 16px;
       width: 2px; background: var(--navy);
     }
     .profile-timeline-item {
@@ -758,12 +762,12 @@
   <!-- ============================================= -->
   <section class="activities">
     <div class="activities-grid">
-      <img src="assets/speech-1.jpg" alt="駅前街頭演説">
-      <img src="assets/crowd-1.jpg" alt="街頭に集まる支援者">
-      <img src="assets/speech-van.jpg" alt="田川伊田駅前 街宣">
-      <img src="assets/crowd-2.jpg" alt="夜の集会">
-      <img src="assets/crowd-3.jpg" alt="地域集会">
-      <img src="assets/speech-2.jpg" alt="街頭演説">
+      <img src="assets/act-1.jpg" alt="街頭演説">
+      <img src="assets/act-2.jpg" alt="街宣車から演説">
+      <img src="assets/act-3.jpg" alt="駅前大群衆">
+      <img src="assets/act-4.jpg" alt="夜の群衆">
+      <img src="assets/act-5.jpg" alt="うらのじん街宣">
+      <img src="assets/act-6.jpg" alt="支援者の集まり">
     </div>
   </section>
 
