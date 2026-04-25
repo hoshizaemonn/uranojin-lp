@@ -7,22 +7,21 @@
   <meta name="description" content="うらのじん公式サイト。しがらみなく、右でも左でもなく、市民最優先の政治を。経済・子育て・教育・福祉、田川独自の改革をお約束します。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;800;900&family=Noto+Serif+JP:wght@400;500;700;900&family=Montserrat:wght@400;500;600;700;800;900&family=Bebas+Neue&family=Zen+Kaku+Gothic+Antique:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;800;900&family=Noto+Serif+JP:wght@400;500;700;900&family=Montserrat:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <!-- Adobe Fonts: ニタラゴルイカ -->
+  <script>
+    (function(d) {
+      var config = { kitId: 'qlu4zri', scriptTimeout: 3000, async: true },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
   <style>
     /* PUDShinGoPr6N Bold（本文全般） */
     @font-face { font-family: 'PUDShinGo'; src: local('FOT-PUDShinGo Pr6N'), local('PUDShinGoPr6N'), local('FOT-PUD新ゴ Pro6N'); }
     /* 小塚ゴシック Pr6N（田川、新時代） */
     @font-face { font-family: 'KozukaGothic'; src: local('Kozuka Gothic Pr6N'), local('KozukaGothicPr6N-Regular'), local('小塚ゴシック Pr6N'), local('KozukaGothicPr6N'); }
-    /* ニタラゴルイカ（うらのじん）- ローカルインストール版を優先 */
-    @font-face {
-      font-family: 'NitalagoRuika';
-      src: local('NitalagoRuikaSeikyo-08M'),
-           local('Nitalago Ruika Seikyo'),
-           local('ニタラゴルイカ'),
-           local('NitalagoRuikaFont');
-      font-weight: normal;
-      font-style: normal;
-    }
+    /* ニタラゴルイカ: Adobe Fonts (Typekit) kit qlu4zri 経由で読み込み */
+    /* CSS font-family 名: nitalago-ruika */
   </style>
   <style>
     /* ===== カラーパレット（AIデザイン準拠：CMYK 100/34/0/0 = #00A8FF）===== */
@@ -79,7 +78,7 @@
     }
     .fv-title-main {
       padding: 0 20px 8px 20px;
-      font-family: 'NitalagoRuika', 'Zen Kaku Gothic Antique', 'Noto Sans JP', sans-serif;
+      font-family: 'nitalago-ruika', 'Noto Sans JP', sans-serif;
       font-size: 28px; font-weight: normal; letter-spacing: 3px;
       color: var(--text-main); line-height: 1;
     }
