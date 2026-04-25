@@ -392,44 +392,32 @@
       color: var(--navy-dark);
     }
 
-    /* 紺色背景の補足ボックス（吹き出し風） */
-    .policy-callout {
+    /* 吹き出しボックス（callout・source共通 水色） */
+    .policy-callout,
+    .policy-source {
       margin: 14px 0 0 22px;
-      background: var(--navy); color: #fff;
+      background: #5BB8E8; color: #fff;
       padding: 18px 20px; border-radius: 6px;
       font-size: 13px; line-height: 1.95;
       position: relative;
     }
-    .policy-callout::before {
-      content: ''; position: absolute; top: -8px; left: 24px;
-      border-left: 8px solid transparent;
-      border-right: 8px solid transparent;
-      border-bottom: 8px solid var(--navy);
-    }
-    .policy-callout + .policy-callout { margin-top: 10px; }
-
-    /* 財源について（薄い水色ボックス） */
-    .policy-source {
-      margin: 14px 0 0 22px;
-      background: var(--navy-pale); color: var(--text-main);
-      padding: 18px 20px; border-radius: 4px;
-      border: 1px solid rgba(0,168,255,0.2);
-      position: relative;
-    }
+    .policy-callout::before,
     .policy-source::before {
       content: ''; position: absolute; top: -8px; left: 24px;
       border-left: 8px solid transparent;
       border-right: 8px solid transparent;
-      border-bottom: 8px solid var(--navy-pale);
+      border-bottom: 8px solid #5BB8E8;
     }
     .policy-source-title {
-      font-size: 14px; font-weight: 700; color: var(--navy);
-      padding-bottom: 8px; margin-bottom: 10px;
-      border-bottom: 1px solid rgba(0,168,255,0.25);
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.85);
+      padding: 3px 14px;
+      font-size: 13px; font-weight: 600; color: #fff;
+      margin-bottom: 12px;
     }
     .policy-source-list { list-style: none; }
     .policy-source-list li {
-      font-size: 13px; line-height: 1.9; color: var(--text-main);
+      font-size: 13px; line-height: 1.9; color: #fff;
       margin-bottom: 10px;
     }
     .policy-source-list li:last-child { margin-bottom: 0; }
