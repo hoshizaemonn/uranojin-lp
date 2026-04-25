@@ -427,20 +427,12 @@
       padding-bottom: 8px; margin-bottom: 10px;
       border-bottom: 1px solid rgba(0,168,255,0.25);
     }
-    .policy-source-list { counter-reset: src; }
+    .policy-source-list { list-style: none; }
     .policy-source-list li {
       font-size: 13px; line-height: 1.9; color: var(--text-main);
-      padding-left: 28px; position: relative; margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     .policy-source-list li:last-child { margin-bottom: 0; }
-    .policy-source-list li::before {
-      counter-increment: src;
-      content: counter(src); position: absolute; left: 0; top: 3px;
-      width: 20px; height: 20px; border-radius: 50%;
-      background: var(--navy); color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 11px; font-weight: 700; font-family: 'Montserrat', sans-serif;
-    }
 
     /* ============================================== */
     /* ===== SNS ===== */
@@ -927,10 +919,8 @@
         多子世帯への大胆な支援を行い、経済的な不安を払拭して、田川市での子育てを全力で応援します。
       </p>
       <div class="policy-callout">
-        3人目以降100万円の出産お祝い金は「出産時・小学校入学時・中学校入学時・高校入学時・高校卒業時」に分割して支給します。
-      </div>
-      <div class="policy-callout">
-        お金が必要となるタイミングでしっかりと支援を行うことで家計の負担の軽減、移住リスクの軽減に繋げます。
+        <p>3人目以降100万円の出産お祝い金は「出産時・小学校入学時・中学校入学時・高校入学時・高校卒業時」に分割して支給します。</p>
+        <p style="margin-top: 1em;">お金が必要となるタイミングでしっかりと支援を行うことで家計の負担の軽減、移住リスクの軽減に繋げます。</p>
       </div>
     </div>
 
@@ -941,11 +931,11 @@
       </p>
       <div class="policy-source">
         <div class="policy-source-title">財源について</div>
-        <ol class="policy-source-list">
-          <li>国の補助制度（文科省・内閣府の地方創生関連補助金を最大限活用します）</li>
-          <li>ふるさと納税（田川の子どもを応援したい！という全国からの気持ちを、ふるさと納税で形にします）</li>
-          <li>地元企業との連携（協賛企業への就職で返済免除とする三者連携モデルも導入し、企業の人材確保にも貢献します）</li>
-        </ol>
+        <ul class="policy-source-list">
+          <li>① 国の補助制度　文科省・内閣府の地方創生関連補助金を最大限活用します。</li>
+          <li>② ふるさと納税　「田川の子どもを応援したい！」という全国からの気持ちを、ふるさと納税で形にします。</li>
+          <li>③ 地元企業との連携　協賛企業への就職で返済免除とする三者連携モデルも導入し、企業の人材確保にも貢献します。</li>
+        </ul>
       </div>
       <p class="policy-item-desc" style="margin-top: 14px;">
         市民の税負担を最小限に抑えながら、持続可能な制度を構築します。
