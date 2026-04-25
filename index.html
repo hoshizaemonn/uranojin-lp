@@ -9,8 +9,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;800;900&family=Noto+Serif+JP:wght@400;500;700;900&family=Montserrat:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
   <style>
-    /* PUDShinGoPr6N（FOT-PUD新ゴ）が端末・Adobe Fontsで利用可能な場合に優先使用 */
+    /* PUDShinGoPr6N Bold（本文全般） */
     @font-face { font-family: 'PUDShinGo'; src: local('FOT-PUDShinGo Pr6N'), local('PUDShinGoPr6N'), local('FOT-PUD新ゴ Pro6N'); }
+    /* 小塚ゴシック Pr6N（田川、新時代） */
+    @font-face { font-family: 'KozukaGothic'; src: local('Kozuka Gothic Pr6N'), local('KozukaGothicPr6N-Regular'), local('小塚ゴシック Pr6N'), local('KozukaGothicPr6N'); }
+    /* ニタラゴルイカ（うらのじん） */
+    @font-face { font-family: 'NitalagoRuika'; src: local('ニタラゴルイカ'), local('NitalagoRuikaFont'), local('Nitalago Ruika'), local('NitalagoRuika'); }
   </style>
   <style>
     /* ===== カラーパレット（AIデザイン準拠：CMYK 100/34/0/0 = #00A8FF）===== */
@@ -67,7 +71,8 @@
     }
     .fv-title-main {
       padding: 0 20px 8px 20px;
-      font-size: 28px; font-weight: 900; letter-spacing: 3px;
+      font-family: 'NitalagoRuika', 'ニタラゴルイカ', 'NitalagoRuikaFont', 'Noto Sans JP', sans-serif;
+      font-size: 28px; font-weight: 400; letter-spacing: 3px;
       color: var(--text-main); line-height: 1;
     }
     .fv-menu-btn {
@@ -106,7 +111,7 @@
     .fv-photo img { display: none; }
     .fv-vertical-text {
       position: absolute; top: 5%; right: 3%;
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'KozukaGothic', 'Kozuka Gothic Pr6N', '小塚ゴシック Pr6N', 'Noto Sans JP', sans-serif;
       font-size: 54px; font-weight: 900; letter-spacing: 10px;
       line-height: 1.1;
       writing-mode: vertical-rl;
