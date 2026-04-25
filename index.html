@@ -605,10 +605,10 @@
       .profile-cta { font-size: 16px; padding: 0 40px 64px; max-width: 760px; margin: 0 auto; }
 
       .activities { padding: 24px 0 80px; }
-      .activities-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 960px; }
+      .activities-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 960px; margin: 0 auto; }
 
       .policy-banner { padding-top: 120px; }
-      .policy-banner-bg { height: 220px; }
+      .policy-banner-bg { height: 220px; max-width: 960px; margin: 0 auto; }
       .policy-banner-textbox { right: 60px; font-size: 30px; padding: 28px 40px; }
 
       .policy-section { padding: 80px 0; }
@@ -631,10 +631,15 @@
       .support { padding: 80px 24px 80px; }
       .support-inner { max-width: 560px; }
       .support-lead { font-size: 19px; }
-      .support-card { padding: 30px 30px 26px; }
+      /* バッジをカード右外に出してテキスト被りを防ぐ */
+      .support-card { padding: 30px 30px 26px; overflow: visible; }
+      .support-card-badge { right: -36px; bottom: 50%; transform: translateY(50%); }
 
       .footer { padding: 56px 24px 26px; }
-      .footer-inner { max-width: 760px; }
+      .footer-inner { max-width: 760px; text-align: center; }
+      /* フッター左ライン非表示、中央配置に合わせる */
+      .footer-info { padding-left: 0; }
+      .footer-info::before { display: none; }
 
       .floating-sp { display: none; }
       .floating-pc { display: block; }
