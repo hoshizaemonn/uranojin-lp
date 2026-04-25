@@ -13,10 +13,13 @@
     @font-face { font-family: 'PUDShinGo'; src: local('FOT-PUDShinGo Pr6N'), local('PUDShinGoPr6N'), local('FOT-PUD新ゴ Pro6N'); }
     /* 小塚ゴシック Pr6N（田川、新時代） */
     @font-face { font-family: 'KozukaGothic'; src: local('Kozuka Gothic Pr6N'), local('KozukaGothicPr6N-Regular'), local('小塚ゴシック Pr6N'), local('KozukaGothicPr6N'); }
-    /* ニタラゴルイカ（うらのじん） */
+    /* ニタラゴルイカ（うらのじん）- ローカルインストール版を優先 */
     @font-face {
       font-family: 'NitalagoRuika';
-      src: url('assets/NitalagoRuika-08.ttf') format('truetype');
+      src: local('NitalagoRuikaSeikyo-08M'),
+           local('Nitalago Ruika Seikyo'),
+           local('ニタラゴルイカ'),
+           local('NitalagoRuikaFont');
       font-weight: normal;
       font-style: normal;
     }
