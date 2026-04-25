@@ -463,20 +463,21 @@
     .support-inner { max-width: 440px; margin: 0 auto; }
     .support-lead {
       font-size: 15px; font-weight: 700; line-height: 1.9;
-      color: var(--text-main); margin-bottom: 26px;
+      color: var(--navy); margin-bottom: 26px;
     }
     .support-card {
-      background: var(--navy-pale); border-radius: 10px;
-      padding: 24px 20px 22px; margin-bottom: 18px; position: relative;
+      background: var(--navy-pale); border-radius: 14px;
+      padding: 24px 20px 28px; margin-bottom: 18px; position: relative;
     }
     .support-card-title {
-      font-size: 14px; font-weight: 700; color: var(--navy-dark);
-      letter-spacing: 2px; margin-bottom: 14px;
+      font-size: 15px; font-weight: 700; color: var(--navy);
+      letter-spacing: 1px; padding-bottom: 14px; margin-bottom: 14px;
+      border-bottom: 1px solid rgba(0,168,255,0.35);
     }
     .support-btn {
-      display: block; width: 100%; max-width: 220px; margin: 0 auto 14px;
-      background: var(--navy); color: #fff;
-      padding: 12px 18px; border-radius: 4px;
+      display: block; width: 100%; max-width: 220px; margin: 0 auto 16px;
+      background: #5BB8E8; color: #fff;
+      padding: 13px 18px; border-radius: 30px;
       font-size: 16px; font-weight: 800; letter-spacing: 2px;
       text-align: center; transition: opacity 0.2s;
     }
@@ -485,13 +486,15 @@
       font-size: 13px; line-height: 1.95; color: var(--text-main); text-align: left;
     }
     .support-card-badge {
-      position: absolute; bottom: 0; right: -4px;
-      background: var(--navy); color: #fff;
-      width: 70px; height: 70px; border-radius: 50%;
+      position: absolute; bottom: -14px; right: -4px;
+      background-image: url('assets/badge-circle.png');
+      background-size: cover;
+      width: 80px; height: 80px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 11px; font-weight: 800; line-height: 1.25; text-align: center;
+      font-size: 11px; font-weight: 800; line-height: 1.4; text-align: center;
+      color: #FFD700;
+      -webkit-text-stroke: 0.3px rgba(0,0,0,0.3);
       transform: rotate(-8deg);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
 
     /* ============================================== */
@@ -1113,7 +1116,7 @@
         <p class="support-card-desc">
           街頭での応援や、政治活動へのサポート、証紙貼りなどできる範囲でのご協力をお願いしています。遠方の方も「情報発信」や「ご紹介」などで関われます。
         </p>
-        <div class="support-card-badge">田川市外<br>の方も<br>大歓迎！</div>
+        <div class="support-card-badge">田川市外の方<br>も大歓迎!</div>
       </div>
 
       <div class="support-card">
