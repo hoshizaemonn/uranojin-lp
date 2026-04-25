@@ -50,9 +50,11 @@
       background: #fff;
     }
     .fv-header {
+      background: #fff;
+    }
+    .fv-header-top {
       display: flex; align-items: center; justify-content: space-between;
       padding: 12px 16px 12px 0;
-      background: #fff;
     }
     .fv-title-block {
       display: inline-block; background: #fff;
@@ -85,6 +87,9 @@
     .fv-menu-btn.open .bars span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
     .fv-menu-btn.open .bars span:nth-child(2) { opacity: 0; }
     .fv-menu-btn.open .bars span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
+    /* PC ナビ（モバイルでは非表示） */
+    .pc-nav { display: none; }
 
     .fv-main {
       position: relative;
@@ -550,13 +555,36 @@
     @media (min-width: 769px) {
       body { padding-bottom: 0; }
 
-      .fv-header { padding: 16px 32px 16px 0; }
+      /* PC ヘッダー：タイトルブロック + PC ナビ縦積み */
+      .fv-header {
+        display: flex; flex-direction: column;
+        padding: 0; align-items: stretch;
+      }
+      .fv-header-top {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 14px 40px 14px 0;
+      }
       .fv-title-tag { font-size: 13px; padding: 5px 20px 5px 32px; }
       .fv-title-main { font-size: 40px; padding: 0 32px 10px; }
-      .fv-menu-btn { width: 64px; height: 64px; }
+      .fv-menu-btn { display: none; }
+
+      /* PC ナビバー */
+      .pc-nav {
+        display: flex; align-items: center; justify-content: flex-end;
+        background: var(--navy); padding: 0 40px;
+        gap: 4px;
+      }
+      .pc-nav a {
+        display: inline-block;
+        color: #fff; font-size: 13px; font-weight: 600; letter-spacing: 1px;
+        padding: 13px 16px;
+        transition: background 0.2s, color 0.2s;
+        white-space: nowrap;
+      }
+      .pc-nav a:hover { background: rgba(255,255,255,0.18); }
 
       .fv-main { aspect-ratio: 16/9; max-height: 100vh; }
-      .fv-photo { background-size: 120% auto; background-position: 48% 5%; }
+      .fv-photo { background-size: 70% auto; background-position: 48% 8%; }
       .fv-vertical-text { font-size: 100px; letter-spacing: 16px; top: 8%; right: 5%; }
 
       .container { max-width: 760px; }
@@ -609,7 +637,7 @@
     /* ===== SP small (380px以下) ===== */
     /* ============================================== */
     @media (max-width: 380px) {
-      .fv-header { padding: 10px 12px 0 0; }
+      .fv-header-top { padding: 10px 12px 0 0; }
       .fv-title-tag { font-size: 10px; padding: 3px 12px 3px 14px; }
       .fv-title-main { font-size: 22px; padding: 0 14px 6px; letter-spacing: 2px; }
       .fv-menu-btn { width: 48px; height: 48px; }
@@ -630,14 +658,26 @@
   <section class="fv">
     <h1 class="sr-only">うらのじん 公式サイト — 田川、新時代</h1>
     <div class="fv-header">
-      <div class="fv-title-block">
-        <div class="fv-title-tag">田川が、ふるさと</div>
-        <div class="fv-title-main">うらのじん</div>
+      <div class="fv-header-top">
+        <div class="fv-title-block">
+          <div class="fv-title-tag">田川が、ふるさと</div>
+          <div class="fv-title-main">うらのじん</div>
+        </div>
+        <div class="fv-menu-btn" id="menuBtn" aria-label="メニューを開く">
+          <div class="bars"><span></span><span></span><span></span></div>
+          <div class="label">メニュー</div>
+        </div>
       </div>
-      <div class="fv-menu-btn" id="menuBtn" aria-label="メニューを開く">
-        <div class="bars"><span></span><span></span><span></span></div>
-        <div class="label">メニュー</div>
-      </div>
+      <nav class="pc-nav" aria-label="メインナビゲーション">
+        <a href="#greeting">ごあいさつ</a>
+        <a href="#profile">プロフィール</a>
+        <a href="#policy-1">経済改革</a>
+        <a href="#policy-2">子育て改革</a>
+        <a href="#policy-3">教育改革</a>
+        <a href="#policy-4">福祉改革</a>
+        <a href="#sns">SNS・YouTube</a>
+        <a href="#support">応援する</a>
+      </nav>
     </div>
     <div class="fv-main">
       <div class="fv-photo">
