@@ -576,7 +576,7 @@
       .fv {
         position: fixed;
         left: 0; top: 0;
-        width: 38vw; height: 100vh;
+        width: 44vw; height: 100vh;
         z-index: 40;
         overflow: hidden;
         background: #111;
@@ -590,6 +590,8 @@
         display: flex; flex-direction: column; align-items: flex-start;
       }
       .fv-header-top { padding: 0; }
+      /* 白いボックス消し */
+      .fv-title-block { background: transparent; }
       .fv-title-tag {
         font-size: 12px; padding: 0; margin-bottom: 6px;
         color: rgba(255,255,255,0.85);
@@ -605,13 +607,14 @@
         position: absolute; inset: 0;
         aspect-ratio: unset; height: 100%; overflow: hidden;
       }
+      /* 上半身ズーム */
       .fv-photo {
-        background-size: cover;
-        background-position: center 12%;
+        background-size: 130% auto;
+        background-position: 48% 18%;
       }
       .fv-vertical-text {
-        font-size: 72px; letter-spacing: 12px;
-        top: 15%; right: 6%;
+        font-size: 64px; letter-spacing: 10px;
+        top: 10%; right: 5%;
       }
 
       /* SNSアイコン（左パネル下部） */
@@ -634,36 +637,56 @@
         display: flex;
         position: fixed;
         right: 0; top: 0;
-        width: 68px; height: 100vh;
+        width: 110px; height: 100vh;
         background: var(--navy-deep);
         z-index: 40;
         flex-direction: column;
-        align-items: center; justify-content: center;
-        gap: 6px;
+        align-items: center;
+        padding: 28px 0 28px;
+        gap: 0;
       }
-      .pc-side-nav a {
+      /* 縦書き名前 */
+      .pc-side-name {
+        display: flex; flex-direction: column; align-items: center;
+        margin-bottom: 20px; gap: 6px;
+      }
+      .pc-side-name-main {
+        writing-mode: vertical-rl; text-orientation: mixed;
+        font-size: 22px; font-weight: 900; letter-spacing: 4px;
+        color: #fff;
+      }
+      .pc-side-name-sub {
+        writing-mode: vertical-rl; text-orientation: mixed;
+        font-size: 9px; font-weight: 500; letter-spacing: 2px;
+        color: rgba(255,255,255,0.7);
+      }
+      /* 横書き丸ナビボタン */
+      .pc-side-links {
+        display: flex; flex-direction: column; align-items: center;
+        gap: 8px; flex: 1; justify-content: center;
+      }
+      .pc-side-links a {
         display: flex; align-items: center; justify-content: center;
-        width: 52px; height: 52px; border-radius: 50%;
+        width: 72px; height: 72px; border-radius: 50%;
         background: rgba(255,255,255,0.12);
-        color: #fff; font-size: 9.5px; font-weight: 700;
-        text-align: center; line-height: 1.35; letter-spacing: 0.5px;
-        transition: background 0.2s;
+        color: #fff; font-size: 11px; font-weight: 700;
+        text-align: center; line-height: 1.4; letter-spacing: 0.5px;
+        transition: background 0.2s; padding: 8px;
       }
-      .pc-side-nav a:hover { background: rgba(255,255,255,0.28); }
-      .pc-side-nav a span { display: block; }
+      .pc-side-links a:hover { background: rgba(255,255,255,0.28); }
 
       /* ===== 中央：スクロールコンテンツ ===== */
       .greeting, .profile, .activities,
       .policy-banner, .policy-section,
       .sns, .support, footer.footer {
-        margin-left: 38vw;
-        margin-right: 68px;
+        margin-left: 44vw;
+        margin-right: 110px;
       }
 
       /* コンテンツ幅調整 */
-      .container { max-width: 640px; margin: 0 auto; }
+      .container { max-width: 600px; margin: 0 auto; }
       .greeting { padding: 64px 0 64px; }
-      .greeting-inner { max-width: 580px; padding: 0 40px; }
+      .greeting-inner { max-width: 100%; padding: 0 40px; }
       .greeting-title { font-size: 38px; }
       .greeting-body { font-size: 15px; }
       .greeting-sig { font-size: 28px; }
@@ -713,7 +736,7 @@
       .footer-info::before { display: none; }
 
       .floating-sp { display: none; }
-      .floating-pc { display: block; right: 84px; }
+      .floating-pc { display: block; right: 126px; }
     }
 
     /* ============================================== */
@@ -800,14 +823,20 @@
 
   <!-- PC右サイドナビ -->
   <nav class="pc-side-nav" aria-label="サイドナビゲーション">
-    <a href="#greeting"><span>ご<br>あ<br>い<br>さ<br>つ</span></a>
-    <a href="#profile"><span>プ<br>ロ<br>フ<br>ィ<br>ー<br>ル</span></a>
-    <a href="#policy-1"><span>経<br>済<br>改<br>革</span></a>
-    <a href="#policy-2"><span>子<br>育<br>て<br>改<br>革</span></a>
-    <a href="#policy-3"><span>教<br>育<br>改<br>革</span></a>
-    <a href="#policy-4"><span>福<br>祉<br>改<br>革</span></a>
-    <a href="#sns"><span>S<br>N<br>S</span></a>
-    <a href="#support"><span>応<br>援<br>す<br>る</span></a>
+    <div class="pc-side-name">
+      <span class="pc-side-name-main">浦野仁</span>
+      <span class="pc-side-name-sub">田川市議会議員候補</span>
+    </div>
+    <div class="pc-side-links">
+      <a href="#greeting">ごあいさつ</a>
+      <a href="#profile">プロフィール</a>
+      <a href="#policy-1">経済改革</a>
+      <a href="#policy-2">子育て改革</a>
+      <a href="#policy-3">教育改革</a>
+      <a href="#policy-4">福祉改革</a>
+      <a href="#sns">SNS</a>
+      <a href="#support">応援する</a>
+    </div>
   </nav>
 
   <!-- ============================================= -->
