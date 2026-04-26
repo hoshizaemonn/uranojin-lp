@@ -601,8 +601,8 @@
       }
       /* 上半身ズーム */
       .fv-photo {
-        background-size: 130% auto;
-        background-position: 48% 18%;
+        background-size: 160% auto;
+        background-position: 48% 12%;
       }
       .fv-vertical-text {
         font-size: 64px; letter-spacing: 10px;
@@ -612,33 +612,35 @@
       /* SNSボックス（左パネル下部・白ボックス2段） */
       .fv-sns-overlay {
         display: flex; flex-direction: column;
-        position: absolute; bottom: 24px; left: 20px;
-        gap: 8px; z-index: 10;
+        position: absolute; bottom: 32px;
+        left: 50%; transform: translateX(-50%);
+        gap: 12px; z-index: 10;
         background: rgba(255,255,255,0.93);
-        border-radius: 10px;
-        padding: 12px 16px;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+        border-radius: 14px;
+        padding: 16px 24px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.22);
+        min-width: 200px;
       }
       /* 上段アイコン行 */
       .fv-sns-icons {
-        display: flex; gap: 12px; align-items: center;
+        display: flex; gap: 18px; align-items: center; justify-content: center;
       }
       .fv-sns-icons a {
-        width: 26px; height: 26px;
+        width: 34px; height: 34px;
         display: flex; align-items: center; justify-content: center;
         transition: opacity 0.2s;
       }
       .fv-sns-icons a:hover { opacity: 0.7; }
-      .fv-sns-icons svg { width: 24px; height: 24px; }
+      .fv-sns-icons svg { width: 32px; height: 32px; }
       /* 下段YouTube行 */
       .fv-sns-yt {
-        display: flex; align-items: center; gap: 8px;
+        display: flex; align-items: center; gap: 10px;
         transition: opacity 0.2s;
       }
       .fv-sns-yt:hover { opacity: 0.7; }
-      .fv-sns-yt svg { width: 28px; height: 20px; flex-shrink: 0; }
+      .fv-sns-yt svg { width: 36px; height: 26px; flex-shrink: 0; }
       .fv-sns-yt span {
-        font-size: 12px; font-weight: 700; color: #333;
+        font-size: 13px; font-weight: 700; color: #333;
         letter-spacing: 0.3px; white-space: nowrap;
       }
 
@@ -655,20 +657,21 @@
         padding: 28px 0 28px;
         gap: 0;
       }
-      /* 縦書き名前 */
+      /* 縦書き名前（横並び2列） */
       .pc-side-name {
-        display: flex; flex-direction: column; align-items: center;
-        margin-bottom: 20px; gap: 6px;
+        display: flex; flex-direction: row; align-items: center;
+        justify-content: center;
+        margin-bottom: 20px; gap: 8px;
       }
       .pc-side-name-main {
         writing-mode: vertical-rl; text-orientation: mixed;
-        font-size: 22px; font-weight: 900; letter-spacing: 4px;
-        color: #fff;
+        font-size: 2.4vw; font-weight: 900; letter-spacing: 6px;
+        color: #fff; line-height: 1.1;
       }
       .pc-side-name-sub {
         writing-mode: vertical-rl; text-orientation: mixed;
-        font-size: 9px; font-weight: 500; letter-spacing: 2px;
-        color: rgba(255,255,255,0.7);
+        font-size: 0.85vw; font-weight: 500; letter-spacing: 2px;
+        color: rgba(255,255,255,0.75);
       }
       /* 横書き丸ナビボタン */
       .pc-side-links {
