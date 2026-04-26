@@ -576,7 +576,7 @@
       .fv {
         position: fixed;
         left: 0; top: 0;
-        width: 42vw; height: 100vh;
+        width: 52vw; height: 100vh;
         z-index: 40;
         overflow: hidden;
         background: #111;
@@ -647,7 +647,7 @@
         display: flex;
         position: fixed;
         right: 0; top: 0;
-        width: 160px; height: 100vh;
+        width: 12vw; height: 100vh;
         background: var(--navy-deep);
         z-index: 40;
         flex-direction: column;
@@ -689,8 +689,8 @@
       .greeting, .profile, .activities,
       .policy-banner, .policy-section,
       .sns, .support, footer.footer {
-        margin-left: 42vw;
-        margin-right: 160px;
+        margin-left: 52vw;
+        margin-right: 12vw;
       }
 
       /* コンテンツ幅調整 */
@@ -746,7 +746,7 @@
       .footer-info::before { display: none; }
 
       .floating-sp { display: none; }
-      .floating-pc { display: block; right: 176px; }
+      .floating-pc { display: block; right: calc(12vw + 16px); }
     }
 
     /* ============================================== */
