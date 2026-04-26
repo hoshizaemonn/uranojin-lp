@@ -562,99 +562,158 @@
     .floating-pc a:hover { transform: translateY(-2px); }
 
     /* ============================================== */
-    /* ===== PC (769px+) ===== */
+    /* ===== PC 3カラムレイアウト (769px+) ===== */
     /* ============================================== */
+
+    /* PC専用: SNSオーバーレイ・サイドナビはモバイルで非表示 */
+    .fv-sns-overlay { display: none; }
+    .pc-side-nav { display: none; }
+
     @media (min-width: 769px) {
-      body { padding-bottom: 0; }
+      body { padding-bottom: 0; overflow-x: hidden; }
 
-      /* PC ヘッダー：タイトル左 + ナビ右、一行に収める */
+      /* ===== 左パネル：固定写真 ===== */
+      .fv {
+        position: fixed;
+        left: 0; top: 0;
+        width: 38vw; height: 100vh;
+        z-index: 40;
+        overflow: hidden;
+        background: #111;
+      }
       .fv-header {
-        display: flex; flex-direction: row;
-        align-items: center; justify-content: space-between;
-        padding: 0; background: #fff;
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        z-index: 5;
+        background: transparent;
+        padding: 28px 28px 0;
+        display: flex; flex-direction: column; align-items: flex-start;
       }
-      .fv-header-top {
-        display: flex; align-items: center;
-        padding: 12px 0 12px 0; flex-shrink: 0;
+      .fv-header-top { padding: 0; }
+      .fv-title-tag {
+        font-size: 12px; padding: 0; margin-bottom: 6px;
+        color: rgba(255,255,255,0.85);
       }
-      .fv-title-tag { font-size: 13px; padding: 5px 20px 5px 32px; }
-      .fv-title-main { font-size: 36px; padding: 0 24px 8px; }
+      .fv-title-main {
+        font-size: 36px; padding: 0;
+        color: #fff;
+      }
       .fv-menu-btn { display: none; }
+      .pc-nav { display: none; }
 
-      /* PC ナビ：白ヘッダー内右側 */
-      .pc-nav {
-        display: flex; align-items: center; justify-content: flex-end;
-        background: transparent; padding: 0 32px;
-        gap: 0; flex-wrap: nowrap;
+      .fv-main {
+        position: absolute; inset: 0;
+        aspect-ratio: unset; height: 100%; overflow: hidden;
       }
-      .pc-nav a {
-        display: inline-block;
-        color: var(--text-main); font-size: 12.5px; font-weight: 700; letter-spacing: 0.5px;
-        padding: 24px 12px;
-        transition: color 0.2s;
-        white-space: nowrap; position: relative;
+      .fv-photo {
+        background-size: cover;
+        background-position: center 12%;
       }
-      .pc-nav a::after {
-        content: ''; position: absolute; bottom: 0; left: 12px; right: 12px;
-        height: 3px; background: var(--navy);
-        transform: scaleX(0); transition: transform 0.2s;
+      .fv-vertical-text {
+        font-size: 72px; letter-spacing: 12px;
+        top: 15%; right: 6%;
       }
-      .pc-nav a:hover { color: var(--navy); }
-      .pc-nav a:hover::after { transform: scaleX(1); }
 
-      .fv-main { aspect-ratio: 16/9; max-height: 100vh; }
-      .fv-photo { background-size: 70% auto; background-position: 48% 8%; }
-      .fv-vertical-text { font-size: 100px; letter-spacing: 16px; top: 8%; right: 5%; }
+      /* SNSアイコン（左パネル下部） */
+      .fv-sns-overlay {
+        display: flex;
+        position: absolute; bottom: 28px; left: 24px;
+        gap: 10px; align-items: center; z-index: 10;
+      }
+      .fv-sns-overlay a {
+        width: 34px; height: 34px; border-radius: 50%;
+        background: rgba(255,255,255,0.22);
+        display: flex; align-items: center; justify-content: center;
+        transition: background 0.2s;
+      }
+      .fv-sns-overlay a:hover { background: rgba(255,255,255,0.45); }
+      .fv-sns-overlay svg { width: 16px; height: 16px; fill: #fff; }
 
-      .container { max-width: 760px; }
+      /* ===== 右パネル：固定サイドナビ ===== */
+      .pc-side-nav {
+        display: flex;
+        position: fixed;
+        right: 0; top: 0;
+        width: 68px; height: 100vh;
+        background: var(--navy-deep);
+        z-index: 40;
+        flex-direction: column;
+        align-items: center; justify-content: center;
+        gap: 6px;
+      }
+      .pc-side-nav a {
+        display: flex; align-items: center; justify-content: center;
+        width: 52px; height: 52px; border-radius: 50%;
+        background: rgba(255,255,255,0.12);
+        color: #fff; font-size: 9.5px; font-weight: 700;
+        text-align: center; line-height: 1.35; letter-spacing: 0.5px;
+        transition: background 0.2s;
+      }
+      .pc-side-nav a:hover { background: rgba(255,255,255,0.28); }
+      .pc-side-nav a span { display: block; }
+
+      /* ===== 中央：スクロールコンテンツ ===== */
+      .greeting, .profile, .activities,
+      .policy-banner, .policy-section,
+      .sns, .support, footer.footer {
+        margin-left: 38vw;
+        margin-right: 68px;
+      }
+
+      /* コンテンツ幅調整 */
+      .container { max-width: 640px; margin: 0 auto; }
+      .greeting { padding: 64px 0 64px; }
+      .greeting-inner { max-width: 580px; padding: 0 40px; }
+      .greeting-title { font-size: 38px; }
+      .greeting-body { font-size: 15px; }
+      .greeting-sig { font-size: 28px; }
+
       .profile-hero { aspect-ratio: 16/7; }
       .profile-hero img { object-position: center 20%; }
-      .profile-header { padding: 56px 40px 40px; }
-      .profile-name { font-size: 46px; letter-spacing: 18px; }
-      .profile-timeline { padding: 8px 40px 56px; max-width: 760px; margin: 0 auto; }
-      .profile-timeline-text { font-size: 16px; }
-      .yumejuku-logo { width: 100px; }
-      .profile-cta { font-size: 16px; padding: 0 40px 64px; max-width: 760px; margin: 0 auto; }
+      .profile-header { padding: 48px 40px 32px; }
+      .profile-name { font-size: 40px; letter-spacing: 14px; }
+      .profile-timeline { padding: 8px 40px 48px; max-width: 580px; margin: 0 auto; }
+      .profile-timeline-text { font-size: 15px; }
+      .yumejuku-logo { width: 90px; }
+      .profile-cta { font-size: 15px; padding: 0 40px 56px; max-width: 580px; margin: 0 auto; }
 
-      .activities { padding: 24px 0 80px; }
-      .activities-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 960px; margin: 0 auto; }
+      .activities { padding: 20px 0 64px; }
+      .activities-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 100%; padding: 0 24px; margin: 0 auto; }
 
-      .policy-banner { padding-top: 120px; }
-      .policy-banner-bg { height: 220px; max-width: 960px; margin: 0 auto; }
-      .policy-banner-textbox { right: 60px; font-size: 30px; padding: 28px 40px; }
+      .policy-banner { padding-top: 100px; }
+      .policy-banner-bg { height: 200px; max-width: 100%; }
+      .policy-banner-textbox { right: 40px; font-size: 24px; padding: 20px 28px; }
 
-      .policy-section { padding: 80px 0; }
-      .policy-section + .policy-section::before { margin: 0 40px 80px; }
-      .policy-header, .policy-headline, .policy-hero-img, .policy-item { max-width: 760px; padding-left: 40px; padding-right: 40px; }
-      .policy-tag { padding: 10px 32px; font-size: 18px; }
-      .policy-bignum { font-size: 160px; top: -32px; right: 40px; }
-      .policy-headline-sub { font-size: 28px; }
-      .policy-headline-main { font-size: 28px; }
-      .policy-hero-img .ribbon { font-size: 20px; padding: 22px 14px; right: 60px; }
-      .policy-item-title { font-size: 19px; }
-      .policy-item-desc { font-size: 15px; }
-      .policy-item-list li { font-size: 15px; }
-      .policy-callout, .policy-source { font-size: 14px; padding: 22px 26px; }
+      .policy-section { padding: 64px 0; }
+      .policy-section + .policy-section::before { margin: 0 32px 64px; }
+      .policy-header, .policy-headline, .policy-hero-img, .policy-item { max-width: 580px; padding-left: 32px; padding-right: 32px; }
+      .policy-tag { padding: 8px 24px; font-size: 16px; }
+      .policy-bignum { font-size: 140px; top: -28px; right: 32px; }
+      .policy-headline-sub { font-size: 24px; }
+      .policy-headline-main { font-size: 24px; }
+      .policy-hero-img .ribbon { font-size: 18px; padding: 18px 12px; right: 48px; }
+      .policy-item-title { font-size: 17px; }
+      .policy-item-desc { font-size: 14px; }
+      .policy-item-list li { font-size: 14px; }
+      .policy-callout, .policy-source { font-size: 13px; padding: 18px 22px; }
 
-      .sns { padding: 80px 24px; }
-      .sns-inner { max-width: 560px; }
-      .sns-title { font-size: 22px; }
+      .sns { padding: 64px 24px; }
+      .sns-inner { max-width: 480px; }
+      .sns-title { font-size: 20px; }
 
-      .support { padding: 80px 24px 80px; }
-      .support-inner { max-width: 560px; }
-      .support-lead { font-size: 19px; }
-      /* バッジをカード右外に出してテキスト被りを防ぐ */
-      .support-card { padding: 30px 30px 26px; overflow: visible; }
+      .support { padding: 64px 24px; }
+      .support-inner { max-width: 480px; }
+      .support-lead { font-size: 17px; }
+      .support-card { padding: 28px 28px 24px; overflow: visible; }
       .support-card-badge { right: -36px; bottom: 50%; transform: translateY(50%); }
 
-      .footer { padding: 56px 24px 26px; }
-      .footer-inner { max-width: 760px; text-align: center; }
-      /* フッター左ライン非表示、中央配置に合わせる */
+      .footer { padding: 48px 24px 24px; }
+      .footer-inner { max-width: 580px; text-align: center; }
       .footer-info { padding-left: 0; }
       .footer-info::before { display: none; }
 
       .floating-sp { display: none; }
-      .floating-pc { display: block; }
+      .floating-pc { display: block; right: 84px; }
     }
 
     /* ============================================== */
@@ -709,6 +768,21 @@
       </div>
       <div class="fv-vertical-text">田川、新時代</div>
     </div>
+    <!-- PC左パネル用SNSアイコン -->
+    <div class="fv-sns-overlay">
+      <a href="https://www.youtube.com/@uranojin0624" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/uranojin0624" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.849.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@uranojin0624" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.75a8.16 8.16 0 004.77 1.52V6.82a4.85 4.85 0 01-1-.13z"/></svg>
+      </a>
+      <a href="https://x.com/Uranojin0624" target="_blank" rel="noopener" aria-label="X">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+    </div>
   </section>
 
   <!-- モバイルナビ -->
@@ -723,6 +797,18 @@
     <a href="#sns">SNS・YouTube</a>
     <a href="#support">応援する</a>
   </div>
+
+  <!-- PC右サイドナビ -->
+  <nav class="pc-side-nav" aria-label="サイドナビゲーション">
+    <a href="#greeting"><span>ご<br>あ<br>い<br>さ<br>つ</span></a>
+    <a href="#profile"><span>プ<br>ロ<br>フ<br>ィ<br>ー<br>ル</span></a>
+    <a href="#policy-1"><span>経<br>済<br>改<br>革</span></a>
+    <a href="#policy-2"><span>子<br>育<br>て<br>改<br>革</span></a>
+    <a href="#policy-3"><span>教<br>育<br>改<br>革</span></a>
+    <a href="#policy-4"><span>福<br>祉<br>改<br>革</span></a>
+    <a href="#sns"><span>S<br>N<br>S</span></a>
+    <a href="#support"><span>応<br>援<br>す<br>る</span></a>
+  </nav>
 
   <!-- ============================================= -->
   <!-- GREETING（ごあいさつ） -->
@@ -1117,13 +1203,13 @@
     <div class="sns-inner">
       <h2 class="sns-title">うらのじんをもっと知る</h2>
       <div class="sns-yt-box">YouTube動画</div>
-      <a href="#" class="sns-btn sns-btn-yt" target="_blank" rel="noopener">
+      <a href="https://www.youtube.com/@uranojin0624" class="sns-btn sns-btn-yt" target="_blank" rel="noopener">
         <span class="sns-btn-icon">
           <svg viewBox="0 0 24 24" fill="#fff"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
         </span>
         YouTubeチャンネルを見る
       </a>
-      <a href="#" class="sns-btn sns-btn-other" target="_blank" rel="noopener">
+      <a href="https://www.instagram.com/uranojin0624" class="sns-btn sns-btn-other" target="_blank" rel="noopener">
         <span class="sns-btn-icon">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -1140,7 +1226,7 @@
         </span>
         Instagram
       </a>
-      <a href="#" class="sns-btn sns-btn-other" target="_blank" rel="noopener">
+      <a href="https://www.tiktok.com/@uranojin0624" class="sns-btn sns-btn-other" target="_blank" rel="noopener">
         <span class="sns-btn-icon">
           <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
             <!-- シアン影（右下オフセット） -->
@@ -1153,7 +1239,7 @@
         </span>
         TikTok
       </a>
-      <a href="#" class="sns-btn sns-btn-other" target="_blank" rel="noopener">
+      <a href="https://x.com/Uranojin0624" class="sns-btn sns-btn-other" target="_blank" rel="noopener">
         <span class="sns-btn-icon">
           <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </span>
