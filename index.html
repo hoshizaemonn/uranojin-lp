@@ -117,14 +117,14 @@
     .fv-photo {
       position: absolute; inset: 0;
       background-image: url('assets/fv-main.jpg');
-      background-size: 100% auto;
+      background-size: 120% auto;
       background-position: 42% top;
     }
     .fv-photo img { display: none; }
     .fv-vertical-text {
-      position: absolute; top: 5%; right: 3%;
+      position: absolute; top: 5%; right: 8%;
       font-family: 'KozukaGothic', 'Kozuka Gothic Pr6N', '小塚ゴシック Pr6N', 'Noto Sans JP', sans-serif;
-      font-size: 62px; font-weight: 900; letter-spacing: 4px;
+      font-size: 54px; font-weight: 900; letter-spacing: 4px;
       line-height: 1.1;
       writing-mode: vertical-rl;
       text-orientation: mixed;
@@ -622,8 +622,9 @@
       }
       .fv-wave { display: none; }
 
-      /* SNSボックス（左パネル下部・白ボックス2段） */
-      .fv-sns-overlay {
+      /* SNSボックス（左パネル下部・PC非表示） */
+      .fv-sns-overlay { display: none; }
+      .fv-sns-overlay-DISABLED {
         display: flex; flex-direction: column;
         position: absolute; bottom: 32px;
         left: 50%; transform: translateX(-50%);
@@ -773,8 +774,8 @@
       .fv-title-tag { font-size: 14px; padding: 3px 12px 3px 14px; }
       .fv-title-main { font-size: 30px; padding: 0 14px 6px; letter-spacing: 2px; }
       .fv-menu-btn { width: 48px; height: 48px; }
-      .fv-photo { background-size: 100% auto; background-position: 42% top; }
-      .fv-vertical-text { font-size: 56px; letter-spacing: 4px; top: 5%; right: 3%; }
+      .fv-photo { background-size: 120% auto; background-position: 42% top; }
+      .fv-vertical-text { font-size: 48px; letter-spacing: 4px; top: 5%; right: 8%; }
       .policy-bignum { font-size: 72px; right: 16px; }
       .policy-headline-main { font-size: 18px; }
       .container, .policy-header, .policy-headline, .policy-hero-img, .policy-item { padding-left: 16px; padding-right: 16px; }
