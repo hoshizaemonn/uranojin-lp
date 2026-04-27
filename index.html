@@ -72,7 +72,7 @@
     }
     .fv-title-tag {
       display: inline-block;
-      padding: 4px 0px 4px 20px; font-size: 12px; font-weight: 600;
+      padding: 4px 0px 4px 20px; font-size: 12px; font-weight: 400;
       letter-spacing: 2px; margin-bottom: 4px;
       color: #1473C4;
     }
@@ -84,7 +84,7 @@
     }
     .fv-menu-btn {
       flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%;
-      background: var(--navy); color: #fff;
+      background: linear-gradient(to bottom, #003087, #1473C4); color: #fff;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       cursor: pointer; position: relative;
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
@@ -110,8 +110,8 @@
       overflow: hidden;
     }
     .fv-wave {
-      position: relative; width: 100%; line-height: 0;
-      margin-top: -4px;
+      position: absolute; bottom: 0; left: 0; right: 0;
+      z-index: 5; line-height: 0;
     }
     .fv-wave img { display: block; width: 100%; height: auto; }
     .fv-photo {
@@ -124,12 +124,12 @@
     .fv-vertical-text {
       position: absolute; top: 5%; right: 3%;
       font-family: 'KozukaGothic', 'Kozuka Gothic Pr6N', '小塚ゴシック Pr6N', 'Noto Sans JP', sans-serif;
-      font-size: 54px; font-weight: 400; letter-spacing: 10px;
+      font-size: 54px; font-weight: 900; letter-spacing: 10px;
       line-height: 1.1;
       writing-mode: vertical-rl;
       text-orientation: mixed;
       z-index: 3;
-      background: linear-gradient(to bottom, #003399, #00A8FF);
+      background: linear-gradient(to bottom, #003087, #1473C4);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -815,9 +815,9 @@
         <img src="assets/fv-main.jpg" alt="うらのじん（浦野仁）">
       </div>
       <div class="fv-vertical-text">田川、新時代</div>
-    </div>
-    <div class="fv-wave">
-      <img src="assets/fv-wave.png" alt="">
+      <div class="fv-wave">
+        <img src="assets/fv-wave.png" alt="">
+      </div>
     </div>
     <!-- PC左パネル用SNSアイコン -->
     <div class="fv-sns-overlay">
