@@ -46,7 +46,7 @@
       font-family: 'PUDShinGo', 'FOT-PUDShinGo Pr6N', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
       color: var(--text-main); line-height: 1.85; background: #fff;
       -webkit-font-smoothing: antialiased;
-      padding-bottom: 48px;
+      padding-bottom: 64px;
     }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     img { max-width: 100%; height: auto; display: block; }
@@ -160,35 +160,35 @@
     /* ============================================== */
     /* ===== GREETING（ごあいさつ）===== */
     /* ============================================== */
-    .greeting { padding: 28px 0 32px; background: #fff; }
-    .greeting-inner { max-width: 680px; margin: 0 auto; padding: 0 22px; }
+    .greeting { padding: 52px 0 56px; background: #fff; }
+    .greeting-inner { max-width: 680px; margin: 0 auto; padding: 0 28px; }
     .greeting-label {
-      text-align: center; margin-bottom: 14px;
+      text-align: center; margin-bottom: 24px;
     }
     .greeting-label span {
       display: inline-block;
-      font-size: 12px; font-weight: 900; letter-spacing: 3px;
-      color: #007BC8; padding-bottom: 5px;
-      border-bottom: 1.5px solid #007BC8;
+      font-size: 15px; font-weight: 900; letter-spacing: 4px;
+      color: #007BC8; padding-bottom: 8px;
+      border-bottom: 2px solid #007BC8;
     }
     .greeting-title {
       text-align: center;
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-      font-size: 28px; font-weight: 900; letter-spacing: 0;
+      font-size: 36px; font-weight: 900; letter-spacing: 0;
       color: #007BC8; line-height: 1.0;
-      margin-bottom: 22px;
+      margin-bottom: 36px;
     }
     .greeting-body {
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-      font-size: 13px; font-weight: 500; line-height: 1.7;
-      color: #1a1a1a; letter-spacing: 0.02em;
+      font-size: 17px; font-weight: 500; line-height: 1.7;
+      color: #1a1a1a; letter-spacing: 0.03em;
     }
-    .greeting-body p { margin-bottom: 1.2em; }
+    .greeting-body p { margin-bottom: 1.8em; }
     .greeting-body p:last-of-type { margin-bottom: 0; }
     .greeting-sig {
-      text-align: center; margin-top: 22px;
+      text-align: center; margin-top: 44px;
       font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
-      font-size: 22px; font-weight: 500; letter-spacing: 6px;
+      font-size: 32px; font-weight: 500; letter-spacing: 8px;
       color: #1a1a1a;
     }
 
@@ -207,7 +207,7 @@
 
     /* 上部写真 */
     .profile-hero {
-      width: 240px; margin: 0 auto;
+      width: calc(100% - 48px); margin: 0 24px;
       overflow: hidden;
     }
     .profile-hero img {
@@ -216,46 +216,46 @@
     }
 
     /* ラベル・名前ブロック */
-    .profile-header { padding: 12px 24px 14px; text-align: center; }
+    .profile-header { padding: 32px 24px 24px; text-align: center; }
     .profile-label {
-      display: inline-block; font-size: 11px; font-weight: 900;
-      color: #007BC8; letter-spacing: 3px;
-      padding-bottom: 4px;
-      border-bottom: 1.5px solid #007BC8;
-      margin-bottom: 12px;
+      display: inline-block; font-size: 15px; font-weight: 900;
+      color: #007BC8; letter-spacing: 4px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #007BC8;
+      margin-bottom: 24px;
     }
     .profile-name {
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-      font-size: 30px; font-weight: 900;
+      font-size: 44px; font-weight: 900;
       color: #007BC8; letter-spacing: 2px;
       line-height: 1.0; margin-bottom: 2px;
     }
     .profile-name-kana {
-      font-size: 14px; font-weight: 900; color: #007BC8;
+      font-size: 22px; font-weight: 900; color: #007BC8;
       letter-spacing: 0;
     }
 
     /* タイムライン */
     .profile-timeline {
-      padding: 4px 24px 10px;
+      padding: 8px 24px 16px;
       position: relative;
     }
     .profile-timeline::before { content: none; }
     .profile-timeline-item {
       display: flex; align-items: flex-start;
-      gap: 12px; padding: 5px 0; position: relative;
+      gap: 16px; padding: 10px 0; position: relative;
     }
     .profile-timeline-item:not(:last-child)::after {
       content: '';
       position: absolute;
-      left: 5px; width: 1.5px;
-      top: 18px;
-      bottom: -10px;
+      left: 6px; width: 1.5px;
+      top: 21px;
+      bottom: -21px;
       background: #007BC8;
       z-index: 0;
     }
     .profile-timeline-dot {
-      flex-shrink: 0; width: 12px; height: 12px; border-radius: 50%;
+      flex-shrink: 0; width: 14px; height: 14px; border-radius: 50%;
       background: #007BC8; margin-top: 4px; position: relative; z-index: 1;
     }
     .profile-timeline-body {
@@ -263,17 +263,17 @@
       gap: 8px;
     }
     .profile-timeline-text {
-      font-size: 11.5px; line-height: 1.55; font-weight: 500; color: var(--text-main);
+      font-size: 14px; line-height: 1.85; font-weight: 500; color: var(--text-main);
     }
     .yumejuku-logo {
-      flex-shrink: 0; width: 56px; height: auto;
+      flex-shrink: 0; width: 80px; height: auto;
     }
 
     /* 下部CTAテキスト */
     .profile-cta {
-      padding: 12px 16px 14px;
+      padding: 16px 16px 20px;
       text-align: center;
-      font-size: 12px; font-weight: 900; line-height: 1.6;
+      font-size: 17.5px; font-weight: 900; line-height: 1.6;
       letter-spacing: 0.03em;
       color: #007BC8;
     }
@@ -281,9 +281,9 @@
     /* ============================================== */
     /* ===== ACTIVITIES（街頭演説写真）===== */
     /* ============================================== */
-    .activities { padding: 0 0 28px; background: #fff; }
+    .activities { padding: 0 0 120px; background: #fff; }
     .activities-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
       max-width: 680px; margin: 0 auto; padding: 0 24px;
     }
     .activities-grid img {
@@ -339,51 +339,51 @@
     /* ============================================== */
     /* ===== POLICY ===== */
     /* ============================================== */
-    .policy-section { padding: 24px 0 24px; background: #fff; }
+    .policy-section { padding: 40px 0 40px; background: #fff; }
     .policy-section + .policy-section { padding-top: 0; }
     .policy-section + .policy-section::before {
       content: '';
       display: block;
-      height: 1.5px;
+      height: 2px;
       background: #cde6f7;
-      margin: 0 24px 20px;
+      margin: 0 24px 40px;
     }
 
     .policy-header {
-      max-width: 680px; margin: 0 auto; padding: 0 22px 8px;
+      max-width: 680px; margin: 0 auto; padding: 0 24px 20px;
       position: relative;
     }
     .policy-tag {
       display: inline-block;
       background: #007BC8; color: #fff;
-      padding: 4px 14px; font-size: 16px; font-weight: 900;
+      padding: 6px 18px; font-size: 22px; font-weight: 900;
       letter-spacing: 1px; border-radius: 0;
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
     }
     .policy-bignum {
-      position: absolute; top: -14px; right: 18px;
+      position: absolute; top: -8px; right: 24px;
       font-family: 'Bebas Neue', 'Montserrat', sans-serif;
-      font-size: 80px; font-weight: 400; line-height: 1;
+      font-size: 110px; font-weight: 400; line-height: 1;
       color: #007BC8;
-      opacity: 0.28;
+      opacity: 0.25;
       letter-spacing: -2px;
     }
     .policy-headline {
-      max-width: 680px; margin: 0 auto; padding: 6px 22px 14px;
+      max-width: 680px; margin: 0 auto; padding: 12px 24px 24px;
     }
     .policy-headline-sub {
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
-      font-size: 17px; font-weight: 900;
-      color: #007BC8; line-height: 1.45; letter-spacing: 0.5px;
+      font-size: 22px; font-weight: 900;
+      color: #007BC8; line-height: 1.5; letter-spacing: 0.5px;
     }
     .policy-headline-main {
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
-      font-size: 17px; font-weight: 900;
-      color: #007BC8; line-height: 1.45; letter-spacing: 0.5px;
+      font-size: 22px; font-weight: 900;
+      color: #007BC8; line-height: 1.5; letter-spacing: 0.5px;
     }
 
     .policy-hero-img {
-      max-width: 680px; margin: 0 auto 16px; padding: 0 22px;
+      max-width: 680px; margin: 0 auto 28px; padding: 0 24px;
       position: relative;
     }
     .policy-hero-img img {
@@ -404,41 +404,41 @@
 
     /* 政策本文アイテム */
     .policy-item {
-      max-width: 680px; margin: 0 auto 14px; padding: 0 22px;
+      max-width: 680px; margin: 0 auto 22px; padding: 0 24px;
     }
     .policy-item {
-      max-width: 680px; margin: 0 auto 16px; padding: 0 22px;
+      max-width: 680px; margin: 0 auto 28px; padding: 0 24px;
     }
     .policy-item-title {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 13px; font-weight: 800; color: #007BC8;
-      line-height: 1.5; margin-bottom: 5px;
+      display: flex; align-items: center; gap: 10px;
+      font-size: 17px; font-weight: 800; color: #007BC8;
+      line-height: 1.55; margin-bottom: 10px;
     }
     .policy-item-title::before {
       content: ''; flex-shrink: 0;
-      width: 8px; height: 8px; border-radius: 50%;
+      width: 10px; height: 10px; border-radius: 50%;
       background: #007BC8;
       display: inline-block;
     }
     .policy-item-desc {
-      font-size: 12px; line-height: 1.75; color: var(--text-main);
-      padding-left: 16px; font-weight: 500;
+      font-size: 14px; line-height: 2.0; color: var(--text-main);
+      padding-left: 20px; font-weight: 500;
     }
     .policy-item-list {
-      padding-left: 18px; margin: 2px 0 6px;
+      padding-left: 22px; margin: 4px 0 10px;
     }
     .policy-item-list li {
-      font-size: 12px; line-height: 1.7; font-weight: 700;
+      font-size: 14px; line-height: 1.95; font-weight: 700;
       color: var(--navy-dark);
     }
 
     /* 吹き出しボックス（callout・source共通 水色） */
     .policy-callout,
     .policy-source {
-      margin: 8px 0 0 18px;
+      margin: 14px 0 0 22px;
       background: #007BC8; color: #fff;
-      padding: 12px 14px; border-radius: 6px;
-      font-size: 12px; line-height: 1.7;
+      padding: 18px 20px; border-radius: 6px;
+      font-size: 15px; line-height: 1.95;
       position: relative;
     }
     .policy-callout::before,
@@ -451,14 +451,14 @@
     .policy-source-title {
       display: inline-block;
       border: 1px solid rgba(255,255,255,0.85);
-      padding: 2px 10px;
-      font-size: 11px; font-weight: 700; color: #fff;
-      margin-bottom: 8px;
+      padding: 3px 14px;
+      font-size: 14px; font-weight: 700; color: #fff;
+      margin-bottom: 12px;
     }
     .policy-source-list { list-style: none; }
     .policy-source-list li {
-      font-size: 12px; line-height: 1.7; color: #fff;
-      margin-bottom: 6px;
+      font-size: 15px; line-height: 1.9; color: #fff;
+      margin-bottom: 10px;
     }
     .policy-source-list li:last-child { margin-bottom: 0; }
 
@@ -466,7 +466,7 @@
     /* ===== SNS ===== */
     /* ============================================== */
     .sns {
-      padding: 28px 22px 32px; background: #1473C4; color: #fff;
+      padding: 44px 24px 48px; background: #1473C4; color: #fff;
       position: relative;
     }
     .sns-chimney-wrap {
@@ -480,82 +480,82 @@
     }
     .sns-inner { max-width: 440px; margin: 0 auto; position: relative; }
     .sns-title {
-      text-align: center; font-size: 16px; font-weight: 900; letter-spacing: 2px;
-      padding-bottom: 10px; margin-bottom: 14px;
+      text-align: center; font-size: 22px; font-weight: 900; letter-spacing: 3px;
+      padding-bottom: 16px; margin-bottom: 24px;
       border-bottom: 1px solid rgba(255,255,255,0.45);
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
     }
     .sns-yt-box {
       background: #fff; border-radius: 4px;
-      aspect-ratio: 16/9; margin-bottom: 12px;
+      aspect-ratio: 16/9; margin-bottom: 18px;
       display: flex; align-items: center; justify-content: center;
-      color: var(--navy); font-weight: 700; font-size: 14px;
+      color: var(--navy); font-weight: 700; font-size: 18px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.1);
       overflow: hidden;
     }
     .sns-yt-box iframe { width: 100%; height: 100%; border: 0; }
     .sns-btn {
       display: flex; align-items: center; justify-content: center; gap: 8px;
-      width: 100%; padding: 9px 14px; border-radius: 24px;
-      font-size: 12px; font-weight: 700; letter-spacing: 1px;
-      margin-bottom: 7px; transition: transform 0.2s;
+      width: 100%; padding: 13px 18px; border-radius: 30px;
+      font-size: 15px; font-weight: 700; letter-spacing: 1px;
+      margin-bottom: 10px; transition: transform 0.2s;
     }
     .sns-btn:hover { transform: translateY(-2px); }
     .sns-btn-yt { background: var(--accent-red); color: #fff; }
     .sns-btn-other {
       background: #fff; color: #333;
     }
-    .sns-btn-icon { width: 18px; height: 18px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .sns-btn-icon { width: 22px; height: 22px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
     .sns-btn-icon svg { width: 100%; height: 100%; }
     .sns-btn-other .sns-btn-icon svg { fill: #333; }
 
     /* ============================================== */
     /* ===== SUPPORT ===== */
     /* ============================================== */
-    .support { padding: 28px 32px 32px; background: #fff; text-align: center; }
+    .support { padding: 48px 24px 56px; background: #fff; text-align: center; }
     .support-inner { max-width: 440px; margin: 0 auto; }
     .support-lead {
-      font-size: 14px; font-weight: 900; line-height: 1.7;
-      color: #007BC8; margin-bottom: 18px;
+      font-size: 18px; font-weight: 900; line-height: 1.9;
+      color: #007BC8; margin-bottom: 30px;
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
     }
     .support-card-wrap {
-      position: relative; margin-bottom: 22px;
+      position: relative; margin-bottom: 56px;
     }
     .support-card {
-      background: #B3D9F2; border-radius: 10px;
-      padding: 16px 18px 18px 18px; position: relative;
+      background: #B3D9F2; border-radius: 14px;
+      padding: 26px 22px 32px 22px; position: relative;
     }
     .support-card-title {
-      font-size: 15px; font-weight: 900; color: #007BC8;
-      letter-spacing: 0.5px; padding-bottom: 8px; margin-bottom: 10px;
+      font-size: 21px; font-weight: 900; color: #007BC8;
+      letter-spacing: 0.5px; padding-bottom: 14px; margin-bottom: 16px;
       position: relative; white-space: nowrap;
     }
     .support-card-title::after {
       content: ''; position: absolute; bottom: 0;
       left: 50%; transform: translateX(-50%);
-      width: 130px; height: 1.5px;
+      width: 180px; height: 1.5px;
       background: #007BC8;
     }
     .support-btn {
-      display: block; width: 130px; margin: 0 auto 10px;
+      display: block; width: 180px; margin: 0 auto 18px;
       background: #007BC8; color: #fff;
-      padding: 7px 10px; border-radius: 8px;
-      font-size: 15px; font-weight: 900; letter-spacing: 1.5px;
+      padding: 10px 14px; border-radius: 12px;
+      font-size: 22px; font-weight: 900; letter-spacing: 1.5px;
       text-align: center; transition: opacity 0.2s;
     }
     .support-btn:hover { opacity: 0.9; }
     .support-card-desc {
-      font-size: 11px; line-height: 1.6; color: #007BC8; text-align: left;
+      font-size: 15px; line-height: 1.7; color: #007BC8; text-align: left;
       font-weight: 400;
     }
     .support-card-badge {
-      position: absolute; bottom: -22px; right: -6px;
+      position: absolute; bottom: -38px; right: -10px;
       background-image: url('assets/badge-circle.png');
-      background-size: 56px 56px;
+      background-size: 78px 78px;
       background-repeat: no-repeat;
       background-position: center;
-      width: 78px; height: 56px;
+      width: 110px; height: 78px;
       display: flex; align-items: center; justify-content: center;
     }
     .support-card-badge img {
@@ -567,27 +567,27 @@
     /* ============================================== */
     .footer {
       background: linear-gradient(to right, #003087 0%, #1473C4 60%, #00A8FF 100%);
-      color: #fff; padding: 22px 24px 14px;
+      color: #fff; padding: 36px 28px 22px;
     }
     .footer-inner { max-width: 440px; margin: 0 auto; }
     .footer-title {
-      font-size: 15px; font-weight: 900; letter-spacing: 2px;
-      margin-bottom: 6px;
+      font-size: 20px; font-weight: 900; letter-spacing: 2px;
+      margin-bottom: 8px;
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
     }
-    .footer-note { font-size: 10px; opacity: 0.95; margin-bottom: 14px; font-weight: 700; }
+    .footer-note { font-size: 12px; opacity: 0.95; margin-bottom: 24px; font-weight: 700; }
     .footer-info {
-      font-size: 11px; line-height: 1.8; padding-left: 12px;
+      font-size: 13px; line-height: 2.0; padding-left: 18px;
       position: relative; font-weight: 700;
     }
     .footer-info::before {
-      content: ''; position: absolute; left: 0; top: 3px; bottom: 3px;
-      width: 4px; background: #fff;
+      content: ''; position: absolute; left: 0; top: 4px; bottom: 4px;
+      width: 6px; background: #fff;
     }
     .footer-info a { text-decoration: none; color: #fff; }
     .footer-copy {
-      text-align: center; font-size: 9px; padding-top: 14px;
-      margin-top: 14px;
+      text-align: center; font-size: 11px; padding-top: 24px;
+      margin-top: 22px;
       opacity: 0.95; letter-spacing: 0.5px; font-weight: 700;
     }
 
@@ -600,7 +600,7 @@
     }
     .floating-sp a {
       display: flex; align-items: center; justify-content: center; gap: 10px;
-      color: #fff; padding: 14px; font-size: 13px; font-weight: 800; letter-spacing: 2px;
+      color: #fff; padding: 18px; font-size: 15px; font-weight: 800; letter-spacing: 2px;
       line-height: 1;
     }
     .floating-pc {
@@ -817,7 +817,7 @@
       .fv-title-tag { font-size: 16px; padding: 3px 12px 3px 14px; }
       .fv-title-main { font-size: 36px; padding: 0 14px 6px; letter-spacing: 2px; }
       .fv-menu-btn { width: 48px; height: 48px; }
-      .fv-photo { background-size: 180% auto; background-position: 52% 17%; }
+      .fv-photo { background-size: 180% auto; background-position: 52% 17%; transform: scaleX(-1); }
       .fv-vertical-text { font-size: 40px; letter-spacing: 0; line-height: 1.0; top: 5%; right: 8%; }
       .policy-bignum { font-size: 72px; right: 16px; }
       .policy-headline-main { font-size: 18px; }
