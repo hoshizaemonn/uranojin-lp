@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>うらのじん 公式サイト｜田川、新時代</title>
-  <meta name="description" content="うらのじん公式サイト。しがらみなく、右でも左でもなく、市民最優先の政治を。経済・子育て・教育・福祉、田川独自の改革をお約束します。">
+  <meta name="description" content="うらのじん公式サイト。しがらみなく、右でも左でもなく、市民最優先の政治を。教育・子育て・経済・福祉、田川独自の改革をお約束します。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;800;900&family=Noto+Serif+JP:wght@400;500;700;900&family=Montserrat:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -72,19 +72,19 @@
     }
     .fv-title-tag {
       display: inline-block;
-      padding: 2px 0px 2px 20px; font-size: 16px; font-weight: 500;
+      padding: 2px 0px 2px 20px; font-size: 18px; font-weight: 700;
       letter-spacing: 1.5px; margin-bottom: 2px;
       color: #1473C4;
     }
     .fv-title-main {
       padding: 0 20px 8px 20px;
       font-family: 'nitalago-ruika', 'Noto Sans JP', sans-serif;
-      font-size: 34px; font-weight: normal; letter-spacing: 3px;
+      font-size: 40px; font-weight: 800; letter-spacing: 3px;
       color: #1473C4; line-height: 1;
     }
     .fv-menu-btn {
       flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%;
-      background: linear-gradient(to bottom, #003087, #1473C4); color: #fff;
+      background: linear-gradient(to right, #003087 0%, #1473C4 60%, #00BBFF 100%); color: #fff;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       cursor: pointer; position: relative;
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
@@ -118,14 +118,14 @@
       position: absolute; inset: 0;
       background-image: url('assets/fv-main.jpg');
       background-size: 180% auto;
-      background-position: 40% 17%;
+      background-position: 52% 17%;
           }
     .fv-photo img { display: none; }
     .fv-vertical-text {
       position: absolute; top: 5%; right: 8%;
       font-family: 'KozukaGothic', 'Kozuka Gothic Pr6N', '小塚ゴシック Pr6N', 'Noto Sans JP', sans-serif;
-      font-size: 54px; font-weight: 900; letter-spacing: 4px;
-      line-height: 1.1;
+      font-size: 46px; font-weight: 900; letter-spacing: 0;
+      line-height: 1.0;
       writing-mode: vertical-rl;
       text-orientation: mixed;
       z-index: 3;
@@ -167,36 +167,36 @@
     }
     .greeting-label span {
       display: inline-block;
-      font-size: 12px; font-weight: 500; letter-spacing: 5px;
-      color: var(--navy); padding-bottom: 8px;
-      border-bottom: 1.5px solid var(--navy);
+      font-size: 15px; font-weight: 900; letter-spacing: 4px;
+      color: #007BC8; padding-bottom: 8px;
+      border-bottom: 2px solid #007BC8;
     }
     .greeting-title {
       text-align: center;
-      font-family: 'nitalago-ruika', 'Noto Sans JP', sans-serif;
-      font-size: 30px; font-weight: normal; letter-spacing: 6px;
-      color: var(--navy); line-height: 1.3;
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+      font-size: 36px; font-weight: 900; letter-spacing: 0;
+      color: #007BC8; line-height: 1.0;
       margin-bottom: 36px;
     }
     .greeting-body {
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-      font-size: 14px; font-weight: 400; line-height: 2.2;
+      font-size: 17px; font-weight: 500; line-height: 1.7;
       color: #1a1a1a; letter-spacing: 0.03em;
     }
     .greeting-body p { margin-bottom: 1.8em; }
     .greeting-body p:last-of-type { margin-bottom: 0; }
     .greeting-sig {
       text-align: center; margin-top: 44px;
-      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
-      font-size: 22px; font-weight: 500; letter-spacing: 12px;
+      font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+      font-size: 32px; font-weight: 500; letter-spacing: 8px;
       color: #1a1a1a;
     }
 
     @media (min-width: 769px) {
       .greeting { padding: 80px 0 80px; }
       .greeting-title { font-size: 42px; margin-bottom: 48px; }
-      .greeting-body { font-size: 15px; line-height: 2.3; }
-      .greeting-sig { font-size: 28px; letter-spacing: 14px; margin-top: 56px; }
+      .greeting-body { font-size: 18px; line-height: 1.8; }
+      .greeting-sig { font-size: 36px; letter-spacing: 8px; margin-top: 56px; }
     }
 
     /* ============================================== */
@@ -205,38 +205,39 @@
     .profile { background: #fff; }
     .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
 
-    /* 上部写真：全幅・上半分クロップ */
+    /* 上部写真 */
     .profile-hero {
-      width: 100%; overflow: hidden;
-      aspect-ratio: 1/1;
+      width: calc(100% - 48px); margin: 0 24px;
+      overflow: hidden;
     }
     .profile-hero img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center 8%;
+      width: 100%; height: auto; display: block;
+      object-fit: contain;
     }
 
     /* ラベル・名前ブロック */
-    .profile-header { padding: 40px 24px 32px; text-align: center; }
+    .profile-header { padding: 32px 24px 24px; text-align: center; }
     .profile-label {
-      display: inline-block; font-size: 13px; font-weight: 500;
-      color: var(--navy); letter-spacing: 4px;
-      padding-bottom: 8px; border-bottom: 1.5px solid var(--navy);
-      margin-bottom: 20px;
+      display: inline-block; font-size: 15px; font-weight: 900;
+      color: #007BC8; letter-spacing: 4px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #007BC8;
+      margin-bottom: 24px;
     }
     .profile-name {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 34px; font-weight: 700;
-      color: var(--navy); letter-spacing: 12px;
-      line-height: 1.2; margin-bottom: 8px;
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+      font-size: 44px; font-weight: 900;
+      color: #007BC8; letter-spacing: 2px;
+      line-height: 1.0; margin-bottom: 2px;
     }
     .profile-name-kana {
-      font-size: 13px; font-weight: 400; color: var(--navy);
-      letter-spacing: 6px;
+      font-size: 22px; font-weight: 900; color: #007BC8;
+      letter-spacing: 0;
     }
 
     /* タイムライン */
     .profile-timeline {
-      padding: 8px 24px 40px;
+      padding: 8px 24px 16px;
       position: relative;
     }
     .profile-timeline::before { content: none; }
@@ -247,15 +248,15 @@
     .profile-timeline-item:not(:last-child)::after {
       content: '';
       position: absolute;
-      left: 6px; width: 2px;
-      top: 21px;     /* pad-top(10) + dot-margin(4) + half-dot(7) */
-      bottom: -21px; /* extends to next item's dot center */
-      background: rgba(0,0,0,0.5);
+      left: 6px; width: 1.5px;
+      top: 21px;
+      bottom: -21px;
+      background: #007BC8;
       z-index: 0;
     }
     .profile-timeline-dot {
       flex-shrink: 0; width: 14px; height: 14px; border-radius: 50%;
-      background: var(--navy); margin-top: 4px; position: relative; z-index: 1;
+      background: #007BC8; margin-top: 4px; position: relative; z-index: 1;
     }
     .profile-timeline-body {
       flex: 1; display: flex; align-items: center; justify-content: space-between;
@@ -270,61 +271,70 @@
 
     /* 下部CTAテキスト */
     .profile-cta {
-      padding: 0 24px 48px;
+      padding: 16px 16px 20px;
       text-align: center;
-      font-size: 18px; font-weight: 600; line-height: 2.0;
-      color: var(--navy);
+      font-size: 17.5px; font-weight: 900; line-height: 1.6;
+      letter-spacing: 0.03em;
+      color: #007BC8;
     }
 
     /* ============================================== */
     /* ===== ACTIVITIES（街頭演説写真）===== */
     /* ============================================== */
-    .activities { padding: 16px 0 48px; background: #fff; }
+    .activities { padding: 0 0 120px; background: #fff; }
     .activities-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
       max-width: 680px; margin: 0 auto; padding: 0 24px;
     }
     .activities-grid img {
-      width: 100%; aspect-ratio: 4/3; object-fit: cover;
+      width: 100%; aspect-ratio: 1/1; object-fit: cover;
     }
     .activities-grid img:first-child {
-      object-position: center top;
+      object-position: center center;
     }
 
     /* ============================================== */
     /* ===== POLICY BANNER ===== */
     /* ============================================== */
     .policy-banner {
-      padding-top: 90px;
+      padding-top: 0;
       background: #fff;
+      position: relative;
     }
     .policy-banner-bg {
       position: relative;
-      background-image: url('assets/policy-bg.png');
-      background-size: cover;
-      background-position: center;
-      height: 170px;
+      width: 100%;
+      overflow: visible;
+    }
+    .policy-banner-bgimg {
+      display: block; width: 100%; height: auto;
     }
     .policy-banner-person {
       position: absolute;
-      left: -8px;
+      left: 0;
       bottom: 0;
-      height: calc(100% + 90px);
+      height: 116%;
       width: auto;
+      object-fit: contain;
     }
     .policy-banner-textbox {
       position: absolute;
-      right: 24px;
-      top: 50%;
+      right: 12px;
+      top: 62%;
       transform: translateY(-50%);
-      border: 2px solid rgba(255,255,255,0.9);
-      padding: 20px 24px;
+      width: 50%;
+      border: 2px solid #fff;
+      padding: 16px 8px;
       text-align: center;
       color: #fff;
-      font-size: 22px;
-      font-weight: 700;
-      line-height: 1.6;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1.15;
+      background: transparent;
     }
+    .policy-banner-textbox p { margin: 0; }
+    .policy-banner-main { font-size: 22px; font-weight: 900; letter-spacing: 0; white-space: nowrap; display: inline-block; }
+    .policy-banner-sub { font-size: 16px; font-weight: 900; white-space: nowrap; display: inline-block; }
 
     /* ============================================== */
     /* ===== POLICY ===== */
@@ -345,30 +355,31 @@
     }
     .policy-tag {
       display: inline-block;
-      background: var(--navy); color: #fff;
-      padding: 8px 20px; font-size: 15px; font-weight: 700;
-      letter-spacing: 2px; border-radius: 0;
+      background: #007BC8; color: #fff;
+      padding: 6px 18px; font-size: 22px; font-weight: 900;
+      letter-spacing: 1px; border-radius: 0;
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
     }
     .policy-bignum {
-      position: absolute; top: -10px; right: 24px;
+      position: absolute; top: -8px; right: 24px;
       font-family: 'Bebas Neue', 'Montserrat', sans-serif;
       font-size: 110px; font-weight: 400; line-height: 1;
-      color: var(--navy);
-      opacity: 0.3;
+      color: #007BC8;
+      opacity: 0.25;
       letter-spacing: -2px;
     }
     .policy-headline {
-      max-width: 680px; margin: 0 auto; padding: 8px 24px 20px;
+      max-width: 680px; margin: 0 auto; padding: 12px 24px 24px;
     }
     .policy-headline-sub {
-      font-family: 'PUDShinGo', 'FOT-PUDShinGo Pr6N', 'Noto Sans JP', sans-serif;
-      font-size: 22px; font-weight: 800;
-      color: var(--navy); line-height: 1.6; letter-spacing: 0.5px;
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+      font-size: 22px; font-weight: 900;
+      color: #007BC8; line-height: 1.5; letter-spacing: 0.5px;
     }
     .policy-headline-main {
-      font-family: 'PUDShinGo', 'FOT-PUDShinGo Pr6N', 'Noto Sans JP', sans-serif;
-      font-size: 22px; font-weight: 800;
-      color: var(--navy); line-height: 1.6; letter-spacing: 0.5px;
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+      font-size: 22px; font-weight: 900;
+      color: #007BC8; line-height: 1.5; letter-spacing: 0.5px;
     }
 
     .policy-hero-img {
@@ -395,18 +406,23 @@
     .policy-item {
       max-width: 680px; margin: 0 auto 22px; padding: 0 24px;
     }
+    .policy-item {
+      max-width: 680px; margin: 0 auto 28px; padding: 0 24px;
+    }
     .policy-item-title {
-      display: flex; align-items: flex-start; gap: 8px;
-      font-size: 16px; font-weight: 800; color: var(--navy);
-      line-height: 1.55; margin-bottom: 8px;
+      display: flex; align-items: center; gap: 10px;
+      font-size: 17px; font-weight: 800; color: #007BC8;
+      line-height: 1.55; margin-bottom: 10px;
     }
     .policy-item-title::before {
-      content: '▣'; color: var(--navy); font-size: 13px; flex-shrink: 0;
-      line-height: 1.7;
+      content: ''; flex-shrink: 0;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: #007BC8;
+      display: inline-block;
     }
     .policy-item-desc {
       font-size: 14px; line-height: 2.0; color: var(--text-main);
-      padding-left: 22px;
+      padding-left: 20px; font-weight: 500;
     }
     .policy-item-list {
       padding-left: 22px; margin: 4px 0 10px;
@@ -420,9 +436,9 @@
     .policy-callout,
     .policy-source {
       margin: 14px 0 0 22px;
-      background: #5BB8E8; color: #fff;
+      background: #007BC8; color: #fff;
       padding: 18px 20px; border-radius: 6px;
-      font-size: 13px; line-height: 1.95;
+      font-size: 15px; line-height: 1.95;
       position: relative;
     }
     .policy-callout::before,
@@ -430,18 +446,18 @@
       content: ''; position: absolute; top: -8px; left: 24px;
       border-left: 8px solid transparent;
       border-right: 8px solid transparent;
-      border-bottom: 8px solid #5BB8E8;
+      border-bottom: 8px solid #007BC8;
     }
     .policy-source-title {
       display: inline-block;
       border: 1px solid rgba(255,255,255,0.85);
       padding: 3px 14px;
-      font-size: 13px; font-weight: 600; color: #fff;
+      font-size: 14px; font-weight: 700; color: #fff;
       margin-bottom: 12px;
     }
     .policy-source-list { list-style: none; }
     .policy-source-list li {
-      font-size: 13px; line-height: 1.9; color: #fff;
+      font-size: 15px; line-height: 1.9; color: #fff;
       margin-bottom: 10px;
     }
     .policy-source-list li:last-child { margin-bottom: 0; }
@@ -449,12 +465,25 @@
     /* ============================================== */
     /* ===== SNS ===== */
     /* ============================================== */
-    .sns { padding: 44px 24px 48px; background: #5BB8E8; color: #fff; }
-    .sns-inner { max-width: 440px; margin: 0 auto; }
+    .sns {
+      padding: 44px 24px 48px; background: #1473C4; color: #fff;
+      position: relative;
+    }
+    .sns-chimney-wrap {
+      padding: 16px 0 0 18px;
+      background: #fff;
+    }
+    .sns-chimney {
+      width: 22px;
+      height: auto;
+      display: block;
+    }
+    .sns-inner { max-width: 440px; margin: 0 auto; position: relative; }
     .sns-title {
-      text-align: center; font-size: 18px; font-weight: 800; letter-spacing: 3px;
-      padding-bottom: 14px; margin-bottom: 24px;
+      text-align: center; font-size: 22px; font-weight: 900; letter-spacing: 3px;
+      padding-bottom: 16px; margin-bottom: 24px;
       border-bottom: 1px solid rgba(255,255,255,0.45);
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
     }
     .sns-yt-box {
       background: #fff; border-radius: 4px;
@@ -486,68 +515,80 @@
     .support { padding: 48px 24px 56px; background: #fff; text-align: center; }
     .support-inner { max-width: 440px; margin: 0 auto; }
     .support-lead {
-      font-size: 15px; font-weight: 700; line-height: 1.9;
-      color: var(--navy); margin-bottom: 26px;
+      font-size: 18px; font-weight: 900; line-height: 1.9;
+      color: #007BC8; margin-bottom: 30px;
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
     }
     .support-card-wrap {
       position: relative; margin-bottom: 56px;
     }
     .support-card {
-      background: #C8E8F8; border-radius: 14px;
-      padding: 24px 20px 32px 20px; position: relative;
+      background: #B3D9F2; border-radius: 14px;
+      padding: 26px 22px 32px 22px; position: relative;
     }
     .support-card-title {
-      font-size: 15px; font-weight: 600; color: #7ab8d4;
-      letter-spacing: 1px; padding-bottom: 14px; margin-bottom: 14px;
-      border-bottom: 1px solid rgba(0,150,220,0.3);
+      font-size: 21px; font-weight: 900; color: #007BC8;
+      letter-spacing: 0.5px; padding-bottom: 14px; margin-bottom: 16px;
+      position: relative; white-space: nowrap;
+    }
+    .support-card-title::after {
+      content: ''; position: absolute; bottom: 0;
+      left: 50%; transform: translateX(-50%);
+      width: 180px; height: 1.5px;
+      background: #007BC8;
     }
     .support-btn {
-      display: block; width: 100%; max-width: 220px; margin: 0 auto 16px;
-      background: #5BB8E8; color: #fff;
-      padding: 13px 18px; border-radius: 30px;
-      font-size: 16px; font-weight: 800; letter-spacing: 2px;
+      display: block; width: 180px; margin: 0 auto 18px;
+      background: #007BC8; color: #fff;
+      padding: 10px 14px; border-radius: 12px;
+      font-size: 22px; font-weight: 900; letter-spacing: 1.5px;
       text-align: center; transition: opacity 0.2s;
     }
     .support-btn:hover { opacity: 0.9; }
     .support-card-desc {
-      font-size: 13px; line-height: 1.95; color: #5BB8E8; text-align: center;
+      font-size: 15px; line-height: 1.7; color: #007BC8; text-align: left;
+      font-weight: 400;
     }
     .support-card-badge {
-      position: absolute; bottom: -42px; right: 0px;
+      position: absolute; bottom: -38px; right: -10px;
       background-image: url('assets/badge-circle.png');
-      background-size: cover;
-      width: 84px; height: 84px;
+      background-size: 78px 78px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 110px; height: 78px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 11.5px; font-weight: 800; line-height: 1.45; text-align: center;
-      color: #FFD700;
-      -webkit-text-stroke: 0.3px rgba(0,0,0,0.2);
+    }
+    .support-card-badge img {
+      width: 100%; height: auto;
     }
 
     /* ============================================== */
     /* ===== FOOTER ===== */
     /* ============================================== */
     .footer {
-      background: #5BB8E8; color: #fff; padding: 32px 24px 18px;
+      background: linear-gradient(to right, #003087 0%, #1473C4 60%, #00A8FF 100%);
+      color: #fff; padding: 36px 28px 22px;
     }
     .footer-inner { max-width: 440px; margin: 0 auto; }
     .footer-title {
-      font-size: 18px; font-weight: 800; letter-spacing: 3px;
+      font-size: 20px; font-weight: 900; letter-spacing: 2px;
       margin-bottom: 8px;
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
     }
-    .footer-note { font-size: 12px; opacity: 0.9; margin-bottom: 22px; }
+    .footer-note { font-size: 12px; opacity: 0.95; margin-bottom: 24px; font-weight: 700; }
     .footer-info {
-      font-size: 13px; line-height: 1.95; padding-left: 18px;
-      position: relative;
+      font-size: 13px; line-height: 2.0; padding-left: 18px;
+      position: relative; font-weight: 700;
     }
     .footer-info::before {
-      content: ''; position: absolute; left: 0; top: 2px; bottom: 2px;
-      width: 5px; background: #fff;
+      content: ''; position: absolute; left: 0; top: 4px; bottom: 4px;
+      width: 6px; background: #fff;
     }
-    .footer-info a { text-decoration: underline; }
+    .footer-info a { text-decoration: none; color: #fff; }
     .footer-copy {
-      text-align: center; font-size: 11px; padding-top: 22px;
+      text-align: center; font-size: 11px; padding-top: 24px;
       margin-top: 22px;
-      opacity: 0.9; letter-spacing: 1px;
+      opacity: 0.95; letter-spacing: 0.5px; font-weight: 700;
     }
 
     /* ============================================== */
@@ -717,13 +758,13 @@
       .greeting { padding: 64px 0 64px; }
       .greeting-inner { max-width: 100%; padding: 0 40px; }
       .greeting-title { font-size: 38px; }
-      .greeting-body { font-size: 15px; }
-      .greeting-sig { font-size: 28px; }
+      .greeting-body { font-size: 18px; }
+      .greeting-sig { font-size: 36px; }
 
       .profile-hero { aspect-ratio: 16/7; }
       .profile-hero img { object-position: center 20%; }
       .profile-header { padding: 48px 40px 32px; }
-      .profile-name { font-size: 40px; letter-spacing: 14px; }
+      .profile-name { font-size: 48px; letter-spacing: 2px; }
       .profile-timeline { padding: 8px 40px 48px; max-width: 580px; margin: 0 auto; }
       .profile-timeline-text { font-size: 15px; }
       .yumejuku-logo { width: 90px; }
@@ -732,9 +773,9 @@
       .activities { padding: 20px 0 64px; }
       .activities-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; max-width: 100%; padding: 0 24px; margin: 0 auto; }
 
-      .policy-banner { padding-top: 100px; }
-      .policy-banner-bg { height: 200px; max-width: 100%; }
-      .policy-banner-textbox { right: 40px; font-size: 24px; padding: 20px 28px; }
+      .policy-banner { padding-top: 0; }
+      .policy-banner-person { height: 116%; }
+      .policy-banner-textbox { right: 40px; font-size: 20px; padding: 16px 24px; width: 40%; bottom: 24px; }
 
       .policy-section { padding: 64px 0; }
       .policy-section + .policy-section::before { margin: 0 32px 64px; }
@@ -755,7 +796,7 @@
 
       .support { padding: 64px 24px; }
       .support-inner { max-width: 480px; }
-      .support-lead { font-size: 17px; }
+      .support-lead { font-size: 22px; }
       .support-card { padding: 28px 28px 24px; overflow: visible; }
       .support-card-badge { right: 0; bottom: -42px; transform: none; }
 
@@ -773,11 +814,11 @@
     /* ============================================== */
     @media (max-width: 380px) {
       .fv-header-top { padding: 10px 12px 0 0; }
-      .fv-title-tag { font-size: 14px; padding: 3px 12px 3px 14px; }
-      .fv-title-main { font-size: 30px; padding: 0 14px 6px; letter-spacing: 2px; }
+      .fv-title-tag { font-size: 16px; padding: 3px 12px 3px 14px; }
+      .fv-title-main { font-size: 36px; padding: 0 14px 6px; letter-spacing: 2px; }
       .fv-menu-btn { width: 48px; height: 48px; }
-      .fv-photo { background-size: 180% auto; background-position: 40% 17%; transform: scaleX(-1); }
-      .fv-vertical-text { font-size: 48px; letter-spacing: 4px; top: 5%; right: 8%; }
+      .fv-photo { background-size: 180% auto; background-position: 52% 17%; transform: scaleX(-1); }
+      .fv-vertical-text { font-size: 40px; letter-spacing: 0; line-height: 1.0; top: 5%; right: 8%; }
       .policy-bignum { font-size: 72px; right: 16px; }
       .policy-headline-main { font-size: 18px; }
       .container, .policy-header, .policy-headline, .policy-hero-img, .policy-item { padding-left: 16px; padding-right: 16px; }
@@ -887,8 +928,7 @@
       <h2 class="greeting-title">田川、新時代</h2>
       <div class="greeting-body">
         <p>私は田川に生まれ、田川で育ち、田川で働いてきました。<br>
-        このふるさと・田川を、心から愛しています。<br>
-        しかし、石炭で栄えた時代は遠くなり、いま田川市は静かに、しかし確実に衰退の道をたどっています。</p>
+        このふるさと・田川を、心から愛しています。しかし、石炭で栄えた時代は遠くなり、いま田川市は静かに、しかし確実に衰退の道をたどっています。</p>
 
         <p>このままでは、学業や就職、あるいは生活の不安から、大切な人たちがこの地を離れ続けていく——そんな未来を、私は黙って見ていることができません。</p>
 
@@ -899,7 +939,7 @@
         約10年の経営で培ったノウハウと、アメリカで学んだ本場の経営学の知識——その両方を、市政に注ぎ込む覚悟です。</p>
 
         <p>掲げる言葉は、「田川、新時代」。<br>
-        経済・子育て・教育・福祉——これら4つの改革を力強く推し進め、田川の未来を切り拓いてまいります。</p>
+        教育・子育て・経済・福祉——これら4つの改革を力強く推し進め、田川の未来を切り拓いてまいります。</p>
 
         <p>しがらみなく、右でも左でもなく、市民最優先の政治をただ一筋に貫く。<br>
         それが、私・浦野仁の約束です。</p>
@@ -914,7 +954,7 @@
   <section class="profile" id="profile">
     <!-- 上部写真（上半分クロップ） -->
     <div class="profile-hero">
-      <img src="assets/profile-top.jpg" alt="浦野仁">
+      <img src="assets/profile-top.png" alt="浦野仁">
     </div>
 
     <!-- ラベル・名前 -->
@@ -1019,7 +1059,7 @@
   <!-- ============================================= -->
   <section class="activities">
     <div class="activities-grid">
-      <img src="assets/act-1.jpg" alt="街頭演説">
+      <img src="assets/act-1-new.png" alt="街頭演説">
       <img src="assets/act-2.jpg" alt="街宣車から演説">
       <img src="assets/act-3.jpg" alt="駅前大群衆">
       <img src="assets/act-4.jpg" alt="夜の群衆">
@@ -1033,9 +1073,10 @@
   <!-- ============================================= -->
   <section class="policy-banner">
     <div class="policy-banner-bg">
-      <img src="assets/policy-person.png" alt="うらのじん" class="policy-banner-person">
+      <img src="assets/policy-bg-v3.png" alt="" class="policy-banner-bgimg">
+      <img src="assets/policy-person-new.png" alt="うらのじん" class="policy-banner-person">
       <div class="policy-banner-textbox">
-        <p>田川、新時代<br>への政策!</p>
+        <p><span class="policy-banner-main">田川、新時代</span><br><span class="policy-banner-sub">への政策!</span></p>
       </div>
     </div>
   </section>
@@ -1267,6 +1308,9 @@
   <!-- ============================================= -->
   <!-- SNS -->
   <!-- ============================================= -->
+  <div class="sns-chimney-wrap">
+    <img src="assets/chimney.png" alt="" class="sns-chimney">
+  </div>
   <section class="sns" id="sns">
     <div class="sns-inner">
       <h2 class="sns-title">うらのじんをもっと知る</h2>
@@ -1336,7 +1380,7 @@
             街頭での応援や、政治活動へのサポート、証紙貼りなどできる範囲でのご協力をお願いしています。遠方の方も「情報発信」や「ご紹介」などで関われます。
           </p>
         </div>
-        <div class="support-card-badge">田川市外の方<br>も大歓迎!</div>
+        <div class="support-card-badge"><img src="assets/badge-text.png" alt="田川市外の方も大歓迎!"></div>
       </div>
 
       <div class="support-card">
