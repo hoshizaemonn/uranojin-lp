@@ -61,31 +61,39 @@
       background: #fff;
     }
     .fv-header {
-      background: linear-gradient(to right, #003087 0%, #1473C4 55%, #00BBFF 100%);
+      background: #fff;
     }
     .fv-header-top {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 14px 16px 14px 22px;
+      padding: 12px 16px 12px 0;
     }
-    .fv-header-name {
+    .fv-title-block {
+      display: inline-block; background: #fff;
+    }
+    .fv-title-tag {
+      display: inline-block;
+      padding: 2px 0px 2px 20px; font-size: 18px; font-weight: 700;
+      letter-spacing: 1.5px; margin-bottom: 2px;
+      color: #1473C4;
+    }
+    .fv-title-main {
+      padding: 0 20px 8px 20px;
       font-family: 'nitalago-ruika', 'Noto Sans JP', sans-serif;
-      font-size: 34px; font-weight: 800;
-      color: #fff; letter-spacing: 1px;
-      line-height: 1;
+      font-size: 40px; font-weight: 800; letter-spacing: 3px;
+      color: #1473C4; line-height: 1;
     }
     .fv-menu-btn {
       flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%;
-      background: #fff; color: #1473C4;
+      background: linear-gradient(to right, #003087 0%, #1473C4 60%, #00BBFF 100%); color: #fff;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
       cursor: pointer; position: relative;
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     }
     .fv-menu-btn .bars { display: flex; flex-direction: column; gap: 4px; }
-    .fv-menu-btn .bars span { display: block; width: 22px; height: 2px; background: #1473C4; transition: all 0.3s; }
+    .fv-menu-btn .bars span { display: block; width: 22px; height: 2px; background: #fff; transition: all 0.3s; }
     .fv-menu-btn .label {
       font-family: 'Noto Sans JP', sans-serif;
       font-size: 8px; font-weight: 700; letter-spacing: 0.5px;
-      color: #1473C4;
       margin-top: 3px;
     }
     .fv-menu-btn.open .bars span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
@@ -100,7 +108,6 @@
       width: 100%;
       aspect-ratio: 3/4;
       overflow: hidden;
-      background: #fff;
     }
     .fv-wave {
       position: absolute; bottom: 0; left: 0; right: 0;
@@ -110,32 +117,22 @@
     .fv-photo {
       position: absolute; inset: 0;
       background-image: url('assets/fv-main.jpg');
-      background-size: 130% auto;
-      background-position: 75% 20%;
-      background-repeat: no-repeat;
-    }
+      background-size: 180% auto;
+      background-position: 52% 17%;
+          }
     .fv-photo img { display: none; }
-    .fv-overlay-text {
-      position: absolute;
-      left: 22px; top: 50%;
-      transform: translateY(-50%);
+    .fv-vertical-text {
+      position: absolute; top: 5%; right: 8%;
+      font-family: 'KozukaGothic', 'Kozuka Gothic Pr6N', '小塚ゴシック Pr6N', 'Noto Sans JP', sans-serif;
+      font-size: 46px; font-weight: 900; letter-spacing: 0;
+      line-height: 1.0;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
       z-index: 3;
-    }
-    .fv-overlay-tag {
-      display: inline-block;
-      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
-      font-size: 22px; font-weight: 800;
-      color: #1473C4; letter-spacing: 0;
-      padding-bottom: 6px;
-      border-bottom: 2px solid #1473C4;
-      margin-bottom: 10px;
-      line-height: 1.0;
-    }
-    .fv-overlay-name {
-      font-family: 'nitalago-ruika', 'Noto Sans JP', sans-serif;
-      font-size: 56px; font-weight: 800;
-      color: #003087; letter-spacing: 1px;
-      line-height: 1.0;
+      background: linear-gradient(to bottom, #003087 0%, #1473C4 55%, #00BBFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     /* ============================================== */
@@ -837,13 +834,12 @@
     /* ===== SP small (380px以下) ===== */
     /* ============================================== */
     @media (max-width: 380px) {
-      .fv-header-top { padding: 12px 12px 12px 18px; }
-      .fv-header-name { font-size: 28px; }
+      .fv-header-top { padding: 10px 12px 0 0; }
+      .fv-title-tag { font-size: 16px; padding: 3px 12px 3px 14px; }
+      .fv-title-main { font-size: 36px; padding: 0 14px 6px; letter-spacing: 2px; }
       .fv-menu-btn { width: 48px; height: 48px; }
-      .fv-photo { background-size: 130% auto; background-position: 75% 20%; }
-      .fv-overlay-text { left: 18px; }
-      .fv-overlay-tag { font-size: 18px; padding-bottom: 5px; }
-      .fv-overlay-name { font-size: 46px; }
+      .fv-photo { background-size: 180% auto; background-position: 52% 17%; }
+      .fv-vertical-text { font-size: 40px; letter-spacing: 0; line-height: 1.0; top: 5%; right: 8%; }
       .policy-bignum { font-size: 72px; right: 16px; }
       .policy-headline-main { font-size: 18px; }
       .container, .policy-header, .policy-headline, .policy-hero-img, .policy-item { padding-left: 16px; padding-right: 16px; }
@@ -860,7 +856,10 @@
     <h1 class="sr-only">うらのじん 公式サイト — 田川、新時代</h1>
     <div class="fv-header">
       <div class="fv-header-top">
-        <div class="fv-header-name">うらのじん</div>
+        <div class="fv-title-block">
+          <div class="fv-title-tag">田川が、ふるさと</div>
+          <div class="fv-title-main">うらのじん</div>
+        </div>
         <div class="fv-menu-btn" id="menuBtn" aria-label="メニューを開く">
           <div class="bars"><span></span><span></span><span></span></div>
           <div class="label">メニュー</div>
@@ -881,10 +880,7 @@
       <div class="fv-photo">
         <img src="assets/fv-main.jpg" alt="うらのじん（浦野仁）">
       </div>
-      <div class="fv-overlay-text">
-        <div class="fv-overlay-tag">田川、新時代</div>
-        <div class="fv-overlay-name">うらのじん</div>
-      </div>
+      <div class="fv-vertical-text">田川、新時代</div>
       <div class="fv-wave">
         <img src="assets/fv-wave.png" alt="">
       </div>
