@@ -80,8 +80,9 @@
     .fv-title-main {
       padding: 0 20px 8px 20px;
       font-family: 'nitalago-ruika', 'Noto Sans JP', sans-serif;
-      font-size: 40px; font-weight: 800; letter-spacing: 3px;
+      font-size: 48px; font-weight: 900; letter-spacing: 4px;
       color: #1473C4; line-height: 1;
+      -webkit-text-stroke: 0.6px #1473C4;
     }
     .fv-menu-btn {
       flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%;
@@ -134,6 +135,11 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+    .fv-vertical-text .vt-comma {
+      display: inline-block;
+      margin-top: -0.55em;
+      margin-bottom: -0.55em;
     }
 
     /* ============================================== */
@@ -816,7 +822,7 @@
     @media (max-width: 380px) {
       .fv-header-top { padding: 10px 12px 0 0; }
       .fv-title-tag { font-size: 16px; padding: 3px 12px 3px 14px; }
-      .fv-title-main { font-size: 36px; padding: 0 14px 6px; letter-spacing: 2px; }
+      .fv-title-main { font-size: 42px; padding: 0 14px 6px; letter-spacing: 3px; }
       .fv-menu-btn { width: 48px; height: 48px; }
       .fv-photo { background-size: 180% auto; background-position: 52% 17%; }
       .fv-vertical-text { font-size: 56px; letter-spacing: 0; line-height: 1.0; top: 5%; right: 6%; }
@@ -860,7 +866,7 @@
       <div class="fv-photo">
         <img src="assets/fv-main.jpg" alt="うらのじん（浦野仁）">
       </div>
-      <div class="fv-vertical-text">田川、新時代</div>
+      <div class="fv-vertical-text">田川<span class="vt-comma">、</span>新時代</div>
       <div class="fv-wave">
         <img src="assets/fv-wave.png" alt="">
       </div>
