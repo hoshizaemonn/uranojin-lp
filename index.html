@@ -180,8 +180,8 @@
     }
     .greeting-body {
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-      font-size: 17px; font-weight: 500; line-height: 1.7;
-      color: #1a1a1a; letter-spacing: 0.03em;
+      font-size: 16px; font-weight: 700; line-height: 1.7;
+      color: #1a1a1a; letter-spacing: -0.02em;
     }
     .greeting-body p { margin-bottom: 1.8em; }
     .greeting-body p:last-of-type { margin-bottom: 0; }
@@ -248,14 +248,14 @@
     .profile-timeline-item:not(:last-child)::after {
       content: '';
       position: absolute;
-      left: 6px; width: 1.5px;
-      top: 21px;
-      bottom: -21px;
+      left: 8px; width: 1.5px;
+      top: 25px;
+      bottom: -17px;
       background: #007BC8;
       z-index: 0;
     }
     .profile-timeline-dot {
-      flex-shrink: 0; width: 14px; height: 14px; border-radius: 50%;
+      flex-shrink: 0; width: 18px; height: 18px; border-radius: 50%;
       background: #007BC8; margin-top: 4px; position: relative; z-index: 1;
     }
     .profile-timeline-body {
@@ -263,7 +263,7 @@
       gap: 8px;
     }
     .profile-timeline-text {
-      font-size: 14px; line-height: 1.85; font-weight: 500; color: var(--text-main);
+      font-size: 16px; line-height: 1.85; font-weight: 500; color: var(--text-main);
     }
     .yumejuku-logo {
       flex-shrink: 0; width: 80px; height: auto;
@@ -319,12 +319,12 @@
     }
     .policy-banner-textbox {
       position: absolute;
-      right: 12px;
+      right: 16px;
       top: 62%;
       transform: translateY(-50%);
-      width: 50%;
+      width: 42%;
       border: 2px solid #fff;
-      padding: 16px 8px;
+      padding: 14px 6px;
       text-align: center;
       color: #fff;
       font-size: 24px;
@@ -333,8 +333,8 @@
       background: transparent;
     }
     .policy-banner-textbox p { margin: 0; }
-    .policy-banner-main { font-size: 22px; font-weight: 900; letter-spacing: 0; white-space: nowrap; display: inline-block; }
-    .policy-banner-sub { font-size: 16px; font-weight: 900; white-space: nowrap; display: inline-block; }
+    .policy-banner-main { font-size: 26px; font-weight: 900; letter-spacing: 0; white-space: nowrap; display: inline-block; }
+    .policy-banner-sub { font-size: 19px; font-weight: 900; white-space: nowrap; display: inline-block; }
 
     /* ============================================== */
     /* ===== POLICY ===== */
@@ -361,7 +361,7 @@
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
     }
     .policy-bignum {
-      position: absolute; top: -8px; right: 24px;
+      position: absolute; top: -8px; right: 48px;
       font-family: 'Bebas Neue', 'Montserrat', sans-serif;
       font-size: 110px; font-weight: 400; line-height: 1;
       color: #007BC8;
@@ -369,16 +369,16 @@
       letter-spacing: -2px;
     }
     .policy-headline {
-      max-width: 680px; margin: 0 auto; padding: 12px 24px 24px;
+      max-width: 680px; margin: 0 auto; padding: 16px 24px 28px;
     }
     .policy-headline-sub {
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
-      font-size: 22px; font-weight: 900;
+      font-size: 26px; font-weight: 900;
       color: #007BC8; line-height: 1.5; letter-spacing: 0.5px;
     }
     .policy-headline-main {
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
-      font-size: 22px; font-weight: 900;
+      font-size: 26px; font-weight: 900;
       color: #007BC8; line-height: 1.5; letter-spacing: 0.5px;
     }
 
@@ -404,49 +404,46 @@
 
     /* 政策本文アイテム */
     .policy-item {
-      max-width: 680px; margin: 0 auto 22px; padding: 0 24px;
-    }
-    .policy-item {
-      max-width: 680px; margin: 0 auto 28px; padding: 0 24px;
+      max-width: 680px; margin: 0 auto 36px; padding: 0 24px;
     }
     .policy-item-title {
       display: flex; align-items: center; gap: 10px;
-      font-size: 17px; font-weight: 800; color: #007BC8;
-      line-height: 1.55; margin-bottom: 10px;
+      font-size: 19px; font-weight: 800; color: #007BC8;
+      line-height: 1.55; margin-bottom: 12px;
     }
     .policy-item-title::before {
       content: ''; flex-shrink: 0;
-      width: 10px; height: 10px; border-radius: 50%;
+      width: 12px; height: 12px; border-radius: 50%;
       background: #007BC8;
       display: inline-block;
     }
     .policy-item-desc {
-      font-size: 14px; line-height: 2.0; color: var(--text-main);
-      padding-left: 20px; font-weight: 500;
+      font-size: 16px; line-height: 1.95; color: var(--text-main);
+      padding-left: 22px; font-weight: 500;
     }
     .policy-item-list {
       padding-left: 22px; margin: 4px 0 10px;
     }
     .policy-item-list li {
-      font-size: 14px; line-height: 1.95; font-weight: 700;
+      font-size: 16px; line-height: 1.95; font-weight: 700;
       color: var(--navy-dark);
     }
 
     /* 吹き出しボックス（callout・source共通 水色） */
     .policy-callout,
     .policy-source {
-      margin: 14px 0 0 22px;
+      margin: 18px 0 0 22px;
       background: #007BC8; color: #fff;
-      padding: 18px 20px; border-radius: 6px;
-      font-size: 15px; line-height: 1.95;
+      padding: 20px 22px; border-radius: 6px;
+      font-size: 17px; font-weight: 600; line-height: 1.9;
       position: relative;
     }
     .policy-callout::before,
     .policy-source::before {
-      content: ''; position: absolute; top: -8px; left: 24px;
-      border-left: 8px solid transparent;
-      border-right: 8px solid transparent;
-      border-bottom: 8px solid #007BC8;
+      content: ''; position: absolute; top: -10px; left: 14px;
+      border-left: 11px solid transparent;
+      border-right: 11px solid transparent;
+      border-bottom: 11px solid #007BC8;
     }
     .policy-source-title {
       display: inline-block;
@@ -457,7 +454,7 @@
     }
     .policy-source-list { list-style: none; }
     .policy-source-list li {
-      font-size: 15px; line-height: 1.9; color: #fff;
+      font-size: 17px; font-weight: 600; line-height: 1.9; color: #fff;
       margin-bottom: 10px;
     }
     .policy-source-list li:last-child { margin-bottom: 0; }
@@ -495,19 +492,19 @@
     }
     .sns-yt-box iframe { width: 100%; height: 100%; border: 0; }
     .sns-btn {
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      width: 100%; padding: 13px 18px; border-radius: 30px;
-      font-size: 15px; font-weight: 700; letter-spacing: 1px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; padding: 15px 12px; border-radius: 30px;
+      font-size: 18px; font-weight: 700; letter-spacing: 1px;
       margin-bottom: 10px; transition: transform 0.2s;
     }
     .sns-btn:hover { transform: translateY(-2px); }
     .sns-btn-yt { background: var(--accent-red); color: #fff; }
     .sns-btn-other {
-      background: #fff; color: #333;
+      background: #fff; color: #007BC8;
     }
-    .sns-btn-icon { width: 22px; height: 22px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .sns-btn-icon { width: 24px; height: 24px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
     .sns-btn-icon svg { width: 100%; height: 100%; }
-    .sns-btn-other .sns-btn-icon svg { fill: #333; }
+    .sns-btn-other .sns-btn-icon svg { fill: #007BC8; }
 
     /* ============================================== */
     /* ===== SUPPORT ===== */
@@ -546,16 +543,16 @@
     }
     .support-btn:hover { opacity: 0.9; }
     .support-card-desc {
-      font-size: 15px; line-height: 1.7; color: #007BC8; text-align: left;
-      font-weight: 400;
+      font-size: 17px; line-height: 1.8; color: #007BC8; text-align: left;
+      font-weight: 500;
     }
     .support-card-badge {
-      position: absolute; bottom: -38px; right: -10px;
+      position: absolute; bottom: -32px; right: -8px;
       background-image: url('assets/badge-circle.png');
-      background-size: 78px 78px;
+      background-size: 68px 68px;
       background-repeat: no-repeat;
       background-position: center;
-      width: 110px; height: 78px;
+      width: 92px; height: 68px;
       display: flex; align-items: center; justify-content: center;
     }
     .support-card-badge img {
@@ -571,22 +568,22 @@
     }
     .footer-inner { max-width: 440px; margin: 0 auto; }
     .footer-title {
-      font-size: 20px; font-weight: 900; letter-spacing: 2px;
-      margin-bottom: 8px;
+      font-size: 24px; font-weight: 900; letter-spacing: 2px;
+      margin-bottom: 10px;
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
     }
-    .footer-note { font-size: 12px; opacity: 0.95; margin-bottom: 24px; font-weight: 700; }
+    .footer-note { font-size: 14px; opacity: 0.95; margin-bottom: 26px; font-weight: 700; }
     .footer-info {
-      font-size: 13px; line-height: 2.0; padding-left: 18px;
+      font-size: 15px; line-height: 2.0; padding-left: 20px;
       position: relative; font-weight: 700;
     }
     .footer-info::before {
       content: ''; position: absolute; left: 0; top: 4px; bottom: 4px;
-      width: 6px; background: #fff;
+      width: 4px; background: #fff;
     }
     .footer-info a { text-decoration: none; color: #fff; }
     .footer-copy {
-      text-align: center; font-size: 11px; padding-top: 24px;
+      text-align: center; font-size: 13px; padding-top: 24px;
       margin-top: 22px;
       opacity: 0.95; letter-spacing: 0.5px; font-weight: 700;
     }
@@ -817,7 +814,7 @@
       .fv-title-tag { font-size: 16px; padding: 3px 12px 3px 14px; }
       .fv-title-main { font-size: 36px; padding: 0 14px 6px; letter-spacing: 2px; }
       .fv-menu-btn { width: 48px; height: 48px; }
-      .fv-photo { background-size: 180% auto; background-position: 52% 17%; transform: scaleX(-1); }
+      .fv-photo { background-size: 180% auto; background-position: 52% 17%; }
       .fv-vertical-text { font-size: 40px; letter-spacing: 0; line-height: 1.0; top: 5%; right: 8%; }
       .policy-bignum { font-size: 72px; right: 16px; }
       .policy-headline-main { font-size: 18px; }
