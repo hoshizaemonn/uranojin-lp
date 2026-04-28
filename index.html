@@ -180,8 +180,8 @@
     }
     .greeting-body {
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
-      font-size: 16px; font-weight: 700; line-height: 1.7;
-      color: #1a1a1a; letter-spacing: -0.02em;
+      font-size: 17px; font-weight: 800; line-height: 1.7;
+      color: #1a1a1a; letter-spacing: -0.06em;
     }
     .greeting-body p { margin-bottom: 1.8em; }
     .greeting-body p:last-of-type { margin-bottom: 0; }
@@ -263,7 +263,8 @@
       gap: 8px;
     }
     .profile-timeline-text {
-      font-size: 16px; line-height: 1.85; font-weight: 500; color: var(--text-main);
+      font-size: 16px; line-height: 1.7; font-weight: 500; color: var(--text-main);
+      letter-spacing: -0.04em;
     }
     .yumejuku-logo {
       flex-shrink: 0; width: 80px; height: auto;
@@ -319,17 +320,17 @@
     }
     .policy-banner-textbox {
       position: absolute;
-      right: 16px;
-      top: 62%;
+      right: 24px;
+      top: 56%;
       transform: translateY(-50%);
-      width: 42%;
-      border: 2px solid #fff;
-      padding: 14px 6px;
+      width: 44%;
+      border: 1px solid #fff;
+      padding: 18px 18px;
       text-align: center;
       color: #fff;
       font-size: 24px;
       font-weight: 900;
-      line-height: 1.15;
+      line-height: 1.2;
       background: transparent;
     }
     .policy-banner-textbox p { margin: 0; }
@@ -356,34 +357,34 @@
     .policy-tag {
       display: inline-block;
       background: #007BC8; color: #fff;
-      padding: 6px 18px; font-size: 22px; font-weight: 900;
+      padding: 3px 14px; font-size: 26px; font-weight: 900;
       letter-spacing: 1px; border-radius: 0;
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
     }
     .policy-bignum {
-      position: absolute; top: -8px; right: 48px;
+      position: absolute; top: -14px; right: 48px;
       font-family: 'Bebas Neue', 'Montserrat', sans-serif;
-      font-size: 110px; font-weight: 400; line-height: 1;
+      font-size: 130px; font-weight: 700; line-height: 1;
       color: #007BC8;
       opacity: 0.25;
       letter-spacing: -2px;
     }
     .policy-headline {
-      max-width: 680px; margin: 0 auto; padding: 16px 24px 28px;
+      max-width: 680px; margin: 0 auto; padding: 20px 24px 36px;
     }
     .policy-headline-sub {
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
       font-size: 26px; font-weight: 900;
-      color: #007BC8; line-height: 1.5; letter-spacing: 0.5px;
+      color: #007BC8; line-height: 1.3; letter-spacing: 0.5px;
     }
     .policy-headline-main {
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
       font-size: 26px; font-weight: 900;
-      color: #007BC8; line-height: 1.5; letter-spacing: 0.5px;
+      color: #007BC8; line-height: 1.3; letter-spacing: 0.5px;
     }
 
     .policy-hero-img {
-      max-width: 680px; margin: 0 auto 28px; padding: 0 24px;
+      max-width: 680px; margin: 0 auto 40px; padding: 0 24px;
       position: relative;
     }
     .policy-hero-img img {
@@ -425,25 +426,30 @@
       padding-left: 22px; margin: 4px 0 10px;
     }
     .policy-item-list li {
-      font-size: 16px; line-height: 1.95; font-weight: 700;
+      font-size: 16px; line-height: 1.5; font-weight: 700;
       color: var(--navy-dark);
+    }
+    .policy-item-title small,
+    .policy-item-title .sub {
+      font-size: 0.78em; font-weight: 700;
     }
 
     /* 吹き出しボックス（callout・source共通 水色） */
     .policy-callout,
     .policy-source {
-      margin: 18px 0 0 22px;
+      margin: 22px 0 0 22px;
       background: #007BC8; color: #fff;
-      padding: 20px 22px; border-radius: 6px;
-      font-size: 17px; font-weight: 600; line-height: 1.9;
+      padding: 22px 20px; border-radius: 8px;
+      font-size: 17px; font-weight: 600; line-height: 1.7;
+      letter-spacing: -0.04em;
       position: relative;
     }
     .policy-callout::before,
     .policy-source::before {
-      content: ''; position: absolute; top: -10px; left: 14px;
-      border-left: 11px solid transparent;
-      border-right: 11px solid transparent;
-      border-bottom: 11px solid #007BC8;
+      content: ''; position: absolute; top: -14px; left: 28px;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 14px solid #007BC8;
     }
     .policy-source-title {
       display: inline-block;
@@ -454,7 +460,8 @@
     }
     .policy-source-list { list-style: none; }
     .policy-source-list li {
-      font-size: 17px; font-weight: 600; line-height: 1.9; color: #fff;
+      font-size: 17px; font-weight: 600; line-height: 1.7; color: #fff;
+      letter-spacing: -0.04em;
       margin-bottom: 10px;
     }
     .policy-source-list li:last-child { margin-bottom: 0; }
@@ -463,7 +470,7 @@
     /* ===== SNS ===== */
     /* ============================================== */
     .sns {
-      padding: 44px 24px 48px; background: #1473C4; color: #fff;
+      padding: 36px 16px 40px; background: #1473C4; color: #fff;
       position: relative;
     }
     .sns-chimney-wrap {
@@ -478,9 +485,10 @@
     .sns-inner { max-width: 440px; margin: 0 auto; position: relative; }
     .sns-title {
       text-align: center; font-size: 22px; font-weight: 900; letter-spacing: 3px;
-      padding-bottom: 16px; margin-bottom: 24px;
+      padding-bottom: 12px; margin-bottom: 18px;
       border-bottom: 1px solid rgba(255,255,255,0.45);
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+      line-height: 1.3;
     }
     .sns-yt-box {
       background: #fff; border-radius: 4px;
@@ -493,9 +501,9 @@
     .sns-yt-box iframe { width: 100%; height: 100%; border: 0; }
     .sns-btn {
       display: flex; align-items: center; justify-content: center; gap: 10px;
-      width: 100%; padding: 15px 12px; border-radius: 30px;
-      font-size: 18px; font-weight: 700; letter-spacing: 1px;
-      margin-bottom: 10px; transition: transform 0.2s;
+      width: 100%; padding: 12px 12px; border-radius: 26px;
+      font-size: 17px; font-weight: 700; letter-spacing: 1px;
+      margin-bottom: 8px; transition: transform 0.2s;
     }
     .sns-btn:hover { transform: translateY(-2px); }
     .sns-btn-yt { background: var(--accent-red); color: #fff; }
@@ -543,8 +551,8 @@
     }
     .support-btn:hover { opacity: 0.9; }
     .support-card-desc {
-      font-size: 17px; line-height: 1.8; color: #007BC8; text-align: left;
-      font-weight: 500;
+      font-size: 17px; line-height: 1.7; color: #007BC8; text-align: left;
+      font-weight: 500; letter-spacing: -0.04em;
     }
     .support-card-badge {
       position: absolute; bottom: -32px; right: -8px;
@@ -569,7 +577,7 @@
     .footer-inner { max-width: 440px; margin: 0 auto; }
     .footer-title {
       font-size: 24px; font-weight: 900; letter-spacing: 2px;
-      margin-bottom: 10px;
+      margin-bottom: 4px;
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
     }
     .footer-note { font-size: 14px; opacity: 0.95; margin-bottom: 26px; font-weight: 700; }
@@ -579,12 +587,12 @@
     }
     .footer-info::before {
       content: ''; position: absolute; left: 0; top: 4px; bottom: 4px;
-      width: 4px; background: #fff;
+      width: 7px; background: #fff;
     }
     .footer-info a { text-decoration: none; color: #fff; }
     .footer-copy {
-      text-align: center; font-size: 13px; padding-top: 24px;
-      margin-top: 22px;
+      text-align: center; font-size: 13px; padding-top: 0;
+      margin-top: 12px;
       opacity: 0.95; letter-spacing: 0.5px; font-weight: 700;
     }
 
@@ -1170,7 +1178,7 @@
     </div>
 
     <div class="policy-item">
-      <div class="policy-item-title">「おかえり田川」奨学金（学費全額免除）</div>
+      <div class="policy-item-title">「おかえり田川」奨学金<span class="sub">（学費全額免除）</span></div>
       <p class="policy-item-desc">
         大学や専門学校の卒業後に田川市内で一定期間就職・定住すれば、進学にかかる学費返済を最大全額免除する制度を整えます。若者の挑戦を支え、街の将来を担う人材を育てます。
       </p>
@@ -1181,14 +1189,14 @@
           <li>② ふるさと納税　「田川の子どもを応援したい！」という全国からの気持ちを、ふるさと納税で形にします。</li>
           <li>③ 地元企業との連携　協賛企業への就職で返済免除とする三者連携モデルも導入し、企業の人材確保にも貢献します。</li>
         </ul>
-        <p style="margin-top: 16px; font-size: 13px; font-weight: 700; line-height: 1.9; color: #fff;">
+        <p style="margin-top: 16px; font-size: 17px; font-weight: 600; line-height: 1.7; letter-spacing: -0.04em; color: #fff;">
           市民の税負担を最小限に抑えながら、持続可能な制度を構築します。
         </p>
       </div>
     </div>
 
     <div class="policy-item">
-      <div class="policy-item-title">子ども習い事応援事業（学習塾を除く）</div>
+      <div class="policy-item-title">子ども習い事応援事業<span class="sub">（学習塾を除く）</span></div>
       <p class="policy-item-desc">
         子どもたちが個性を伸ばし、自己肯定感を育めるよう、文化・スポーツ・芸術など、習い事にかかる費用を助成。家庭の事情を問わず、すべての子どもに「第三の居場所」を届けます。
       </p>
@@ -1274,7 +1282,7 @@
     </div>
 
     <div class="policy-item">
-      <div class="policy-item-title">多世代交流拠点（幼老複合施設等）の創設</div>
+      <div class="policy-item-title">多世代交流拠点<span class="sub">（幼老複合施設等）</span>の創設</div>
       <p class="policy-item-desc">
         こども食堂等と高齢者の憩いの場（シニア食堂）を合体、子どもの笑い声で高齢者の元気になり、高齢者の知恵が子どもを育む、温かな「街の家族」の場を作ります。
       </p>
