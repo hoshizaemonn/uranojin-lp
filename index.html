@@ -441,17 +441,19 @@
       max-width: 680px; margin: 0 auto 52px; padding: 0 24px;
     }
     .policy-item-title {
-      display: flex; align-items: flex-start; gap: 8px;
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
       font-size: 19px; font-weight: 700; color: #007BC8;
       line-height: 1.9; margin-bottom: 12px; letter-spacing: 0.02em;
+      padding-left: 22px; text-indent: -22px;
     }
     .policy-item-title::before {
-      content: ''; flex-shrink: 0;
+      content: '';
       width: 13px; height: 13px; border-radius: 50%;
       background: #007BC8;
       display: inline-block;
-      margin-top: 0.45em;
+      margin-right: 9px;
+      vertical-align: 0.1em;
+      text-indent: 0;
     }
     .policy-item-desc {
       font-size: 16px; line-height: 1.7; color: var(--text-main);
@@ -466,9 +468,8 @@
     }
     .policy-item-title small,
     .policy-item-title .sub {
-      font-size: 1em; font-weight: 800;
-      letter-spacing: -0.18em;
-      font-feature-settings: "palt";
+      font-size: 0.85em; font-weight: 700;
+      letter-spacing: 0.02em;
     }
 
     /* 吹き出しボックス（callout・source共通 水色） */
